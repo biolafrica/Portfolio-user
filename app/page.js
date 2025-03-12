@@ -1,3 +1,4 @@
+
 export default function Home() {
   return (
     <section className="landing">
@@ -9,19 +10,24 @@ export default function Home() {
       </div>
 
       <div className="btn-cont">
-        <button className="pri-btn"><img src="/icon.svg" alt="" />Github</button>
-        <button className="sec-btn"><img src="/resume.svg" alt="" />Resume</button>
+        <button className="pri-btn">
+          <img src="/icons/icon.svg" alt="github icon" />Github
+        </button>
+
+        <button className="sec-btn">
+          <img src="/icons/resume.svg" alt="resume icon" />Resume
+        </button>
       </div>
 
       <div className="stack-cont">
         <div className="stack_cont">
-          <img src="/javascript.svg" alt="" />
-          <img src="/react.svg" alt="" />
-          <img src="/next 1.svg" alt="" />
-          <img src="/nodejs_logo.svg" alt="" />
-          <img src="/mongodb_logo.svg" alt="" />
-          <img src="/Express.svg" alt="" />
-          <img src="/typescript.svg" alt="" />
+          <img src="/images/javascript.svg" alt="javascript icon" />
+          <img src="/images/react.svg" alt="reactjs icon" />
+          <img src="/images/next 1.svg" alt="nextjs icon" />
+          <img src="/images/nodejs_logo.svg" alt="nodejs icon" />
+          <img src="/images/mongodb_logo.svg" alt="mongodb icon" />
+          <img src="/images/Express.svg" alt="expressjs icon" />
+          <img src="/images/typescript.svg" alt="typescript icon" />
         </div>
 
         <h6>Currently specializing in MERN stack</h6>

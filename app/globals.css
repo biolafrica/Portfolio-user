@@ -138,7 +138,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-weight: 200;
   gap: 8px;
   border: #f0fff6;
-  background-color:#3ecf8e;
+  background-color:#2aa874;
   color: var(--Text-dark);
   width: fit-content;
   cursor: pointer;
@@ -185,7 +185,7 @@ button img{
 
 .landing{
   width: 45%;
-  margin: 150px auto;
+  margin: 100px auto;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -194,7 +194,7 @@ button img{
 
 .landing h5{
   color: var(--Secondary-Text-dark);
-  font-weight: 200;
+  
 }
 
 .stack_cont{
@@ -220,6 +220,22 @@ button img{
   flex-direction: column;
   gap: 10px;
 }
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 150px;
+  border-bottom: 1px solid var(--Seperator-dark);
+}
+
+.right{
+  display: flex;
+  gap: 20px;
+}
+
+
+
 
 @media(max-width:768px) {
   h1 {
@@ -283,4 +299,5 @@ button img{
     line-height: 21px;
     letter-spacing: 0.7%;
   }
+
 }

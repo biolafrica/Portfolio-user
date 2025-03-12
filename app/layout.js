@@ -1,5 +1,6 @@
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import Header from "./components/nav/header";
 
 
 const manrope = Manrope({
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body className={manrope.className}>
+        <Header/>
         {children}
       </body>
     </html>
