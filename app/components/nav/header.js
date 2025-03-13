@@ -15,7 +15,7 @@ export default function Header(){
           <Link href="/project">Projects</Link>
           <Link href="/blog">Blog</Link>
         </div>
-
+        
         <MenuButton/>
       </nav>
 
