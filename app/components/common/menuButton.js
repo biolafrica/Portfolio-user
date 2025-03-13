@@ -14,6 +14,14 @@ export default function MenuButton(){
     setDisplay("none")
   }
 
+  window.addEventListener("resize", ()=>{
+  const screenWidth = window.innerWidth;
+  if(screenWidth > 992){
+    setDisplay("none")
+  }
+  
+})
+
   return(
     <>
       <div className="hamburger">
@@ -38,7 +46,7 @@ export default function MenuButton(){
           <Link href="/project" onClick={handleClose}>Projects</Link>
           <Link href="/blog" onClick={handleClose}>Blog</Link>
         </div>
-        
+
       </div>
     </>
 
