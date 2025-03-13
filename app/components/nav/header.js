@@ -1,20 +1,22 @@
 import Link from "next/link"
+import MenuButton from "../common/menuButton"
 
 export default function Header(){
   return(
     <headers>
-      <nav>
 
-        <div className="left">
-          <img src="/icons/Token.svg" alt="" />
-        </div>
+      <nav>
+        <Link href="/" className="left">
+          <img src="/icons/Token.svg" alt="abiodun logo" />
+        </Link>
 
         <div className="right">
-          <h5>Home</h5>
-          <h5>Project</h5>
-          <h5>Blog</h5>
+          <Link href="/">Home</Link>
+          <Link href="/project">Projects</Link>
+          <Link href="/blog">Blog</Link>
         </div>
 
+        <MenuButton/>
       </nav>
 
 

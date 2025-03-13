@@ -183,6 +183,13 @@ button img{
   height: 24px;
 }
 
+a{
+  text-decoration: none;
+  color: var(--Text-dark);
+  font-weight: 500;
+
+}
+
 /* landing page css */
 .landing{
   width: 60%;
@@ -232,6 +239,18 @@ nav{
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.hamburger{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.hamburger :hover{
+  background-color: grey;
+  border-radius: 3px;
 }
 
 /* stack animation css */
@@ -328,6 +347,20 @@ nav{
   .stack_cont {
     margin: 50px auto 10px auto;
   }
+
+  .right {
+    display: none;
+  }
+
+  .hamburger{
+    display: flex;
+  }
+
+  nav {
+    padding: 10px 20px;
+  }
+
+
 }
 
 @media(min-width:769px) and (max-width:992px) {
@@ -363,6 +396,10 @@ nav{
 
   .landing{
     width: 70%;
+  }
+
+  nav{
+    padding: 10px 50px;
   }
 
 }
