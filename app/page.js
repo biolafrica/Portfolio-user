@@ -1,4 +1,6 @@
 import AboutMe from "./components/static/about";
+import Link from "next/link";
+import ProjectList from "./components/common/projectList";
 
 export default function Home() {
   return (
@@ -56,10 +58,10 @@ export default function Home() {
 
             <div className="about-heading">
               <img src="/icons/Person 4.svg" alt="person icon" />
-              <h4 style={{color:"#ffffff"}}>ABOUT ME</h4>
+              <h5 style={{color:"#ffffff"}}>ABOUT ME</h5>
             </div>
             <AboutMe/>
-            
+
           </div>
 
           <div className="about-me-cont-image">
@@ -68,6 +70,24 @@ export default function Home() {
         </div>
 
         
+
+      </section>
+
+      <section className="Projects">
+         
+        <div className="project-head-cont">
+
+          <h5>MY PROJECTS</h5>
+          <h6>A Showcase of Innovative Solutions and Real-World Applications.</h6>
+
+          <Link href="/project" className="pri-btn">
+            <h6>Explore more</h6>
+            <img src="/icons/Arrow forward.svg" alt="next arrow icon" />
+          </Link>
+
+        </div>
+
+        <ProjectList/>
 
       </section>
     </>

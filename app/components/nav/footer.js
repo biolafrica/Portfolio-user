@@ -1,7 +1,5 @@
 import Link from "next/link"
 
-
-
 export default function Footer(){
   const year = new Date().getFullYear();
 
@@ -29,7 +27,7 @@ export default function Footer(){
       </div>
 
       <div className="copyright">
-        <h6 class="dark-color">Copyright &copy; {year} Abiodun Biobaku</h6>
+        <h6>Copyright &copy; {year} Abiodun Biobaku</h6>
       </div>
     </>
   
