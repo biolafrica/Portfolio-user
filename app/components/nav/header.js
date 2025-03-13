@@ -3,7 +3,7 @@ import MenuButton from "../common/menuButton"
 
 export default function Header(){
   return(
-    <headers>
+    <div>
 
       <nav>
         <Link href="/" className="left">
@@ -21,7 +21,7 @@ export default function Header(){
 
 
 
-    </headers>
+    </div>
   )
 
 }

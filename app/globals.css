@@ -317,6 +317,47 @@ nav{
   }
 }
 
+/* About me css */
+.about-me{
+  padding: 100px 30px;
+}
+
+.about-me-cont{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 700px;
+}
+
+.about-me-cont-text{
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 60px 50px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--Seperator-dark);
+  color: var(--Secondary-Text-dark);
+  font-weight: 300;
+}
+
+.about-me-cont-image{
+  width: 40%;
+  height: 100%;
+}
+.about-me-cont-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-heading{
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 
 
 
@@ -352,7 +393,8 @@ nav{
   }
 
   .landing{
-   width: 100%;
+    width: 100%;
+    margin-bottom: 100px;
   }
 
   .stack_cont {
@@ -407,6 +449,27 @@ nav{
     padding-bottom: 10px;
   }
 
+  .about-me {
+    padding: 50px 0px;
+  }
+
+  .about-me-cont {
+    padding: 100px 0px;
+    height: 900px;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-me-cont-image {
+    width: 100%;
+  }
+
+  .about-me-cont-text {
+    width: 100%;
+    padding: 40px 15px;
+  }
+
 }
 
 @media(min-width:769px) and (max-width:992px) {
@@ -442,6 +505,7 @@ nav{
 
   .landing{
     width: 70%;
+   
   }
 
   nav{
@@ -450,6 +514,15 @@ nav{
 
   .nav-bar{
     display: none;
+  }
+
+  .about-me {
+    padding: 100px 0px;
+  }
+
+
+  .about-me-cont-text {
+    width: 100%;
   }
 
 }
