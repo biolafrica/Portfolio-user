@@ -185,7 +185,7 @@ button img{
 
 /* landing page css */
 .landing{
-  width: 45%;
+  width: 60%;
   margin: 100px auto;
   text-align: center;
   display: flex;
@@ -193,9 +193,14 @@ button img{
   gap: 30px;
 }
 
-.landing h5{
+
+.sub-intro-text{
   color: var(--Secondary-Text-dark);
-  
+
+}
+
+.head-intro-text{
+  color: #3ecf8e;
 }
 
 
@@ -315,6 +320,14 @@ nav{
     line-height: 21.3px;
     letter-spacing: 0.6%;
   }
+
+  .landing{
+   width: 100%;
+  }
+
+  .stack_cont {
+    margin: 50px auto 10px auto;
+  }
 }
 
 @media(min-width:769px) and (max-width:992px) {
@@ -346,6 +359,10 @@ nav{
     font-size: 16px;
     line-height: 21px;
     letter-spacing: 0.7%;
+  }
+
+  .landing{
+    width: 70%;
   }
 
 }

@@ -4,9 +4,9 @@ export default function Home() {
     <section className="landing">
 
       <div className="text-cont">
-        <h4 style={{color : "#3ecf8e"}}>Hi, I am</h4>
+        <h5 className="head-intro-text">Hi, I am</h5>
         <h1>Abiodun Biobaku</h1>
-        <h5>Software engineer dedicated to innovation, committed to enriching lives by leveraging the power of technology to create impactful solutions.</h5>
+        <h5 className="sub-intro-text">Software engineer dedicated to innovation,<br/> committed to enriching lives by leveraging the power of <br/> technology to create impactful solutions.</h5>
       </div>
 
       <div className="btn-cont">
