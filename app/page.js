@@ -21,13 +21,23 @@ export default function Home() {
 
       <div className="stack-cont">
         <div className="stack_cont">
-          <img src="/images/javascript.svg" alt="javascript icon" />
-          <img src="/images/react.svg" alt="reactjs icon" />
-          <img src="/images/next 1.svg" alt="nextjs icon" />
-          <img src="/images/nodejs_logo.svg" alt="nodejs icon" />
-          <img src="/images/mongodb_logo.svg" alt="mongodb icon" />
-          <img src="/images/Express.svg" alt="expressjs icon" />
-          <img src="/images/typescript.svg" alt="typescript icon" />
+          <div className="scrolling_wrapper">
+            <img src="/images/javascript.svg" alt="javascript icon" />
+            <img src="/images/react.svg" alt="reactjs icon" />
+            <img src="/images/next 1.svg" alt="nextjs icon" />
+            <img src="/images/nodejs_logo.svg" alt="nodejs icon" />
+            <img src="/images/mongodb_logo.svg" alt="mongodb icon" />
+            <img src="/images/Express.svg" alt="expressjs icon" />
+            <img src="/images/typescript.svg" alt="typescript icon" />
+            
+            <img src="/images/javascript.svg" alt="javascript icon" />
+            <img src="/images/react.svg" alt="reactjs icon" />
+            <img src="/images/next 1.svg" alt="nextjs icon" />
+            <img src="/images/nodejs_logo.svg" alt="nodejs icon" />
+            <img src="/images/mongodb_logo.svg" alt="mongodb icon" />
+            <img src="/images/Express.svg" alt="expressjs icon" />
+            <img src="/images/typescript.svg" alt="typescript icon" />
+          </div>
         </div>
 
         <h6>Currently specializing in MERN stack</h6>
