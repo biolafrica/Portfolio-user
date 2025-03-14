@@ -14,13 +14,16 @@ export default function MenuButton(){
     setDisplay("none")
   }
 
+
   window.addEventListener("resize", ()=>{
-  const screenWidth = window.innerWidth;
-  if(screenWidth > 992){
-    setDisplay("none")
-  }
+    const screenWidth = window.innerWidth;
+    if(screenWidth > 992){
+      setDisplay("none")
+    }
+
+  })
+
   
-})
 
   return(
     <>

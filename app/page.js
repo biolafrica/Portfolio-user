@@ -1,6 +1,7 @@
 import AboutMe from "./components/static/about";
 import Link from "next/link";
 import ProjectList from "./components/common/projectList";
+import BlogList from "./components/common/blogList";
 
 export default function Home() {
   return (
@@ -90,10 +91,29 @@ export default function Home() {
         <ProjectList/>
 
       </section>
-    </>
-   
 
-    
+      <section className="Blog">
+
+        <div className="blog_heading">
+          <h5>BLOG</h5>
+          <h3>Tech Business & Life.</h3>
+          <h3>My Journey Unfiltered</h3>
+
+          <div className="blog_sub_head">
+            <h5>I share some updates about my life along with my thoughts on technology and startups.</h5>
+
+            <Link href="/blog" className="pri-btn">
+              <h6>Explore more</h6>
+              <img src="/icons/Arrow forward.svg" alt="next arrow icon" />
+            </Link>
+
+          </div>
+        </div>
+
+        <BlogList/>
+        
+      </section>
+    </>
    
   );
 }

@@ -73,9 +73,9 @@ h5 {
 
 h6 {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  letter-spacing: 0.7%;
+  font-size: clamp(12px, 1.8vw, 14px);
+  line-height: clamp(16px, 2.2vw, 20px);
+  letter-spacing: clamp(0.4px, 0.1vw, 0.5px);
 }
 
 h1,
@@ -319,7 +319,7 @@ nav{
 
 /* About me css */
 .about-me{
-  padding: 100px 30px;
+  padding: 100px 50px;
 }
 
 .about-me-cont{
@@ -479,7 +479,58 @@ nav{
   width: fit-content;
 }
 
+/*blog section css*/
+.Blog{
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 
+.blog_body_cont{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.blog_body{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  
+}
+
+.blog_body_colum{
+  border: 1px solid var(--Border-dark);
+  width: 50%;
+  height: 190px;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.blog_heading h5{
+  font-weight: 400;
+  color: var(--Secondary-Text-dark);
+
+}
+
+.blog_body_colum h5 {
+  color: #2aa874;
+}
+
+.blog_body_colum h6 {
+  color: var(--Secondary-Text-dark);
+}
+
+.blog_sub_head{
+  display: flex;
+  justify-content: space-between;
+}
 
 
 @media(max-width:768px) {
