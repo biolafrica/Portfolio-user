@@ -52,7 +52,6 @@ export default function Home() {
       </section>
 
       <section className="about-me">
-
         <div className="about-me-cont">
 
           <div className="about-me-cont-text">
@@ -69,17 +68,14 @@ export default function Home() {
            <img src="/images/me.jpeg" alt="abiodun headshot" />
           </div>
         </div>
-
-        
-
       </section>
 
       <section className="Projects">
          
         <div className="project-head-cont">
 
-          <h5>MY PROJECTS</h5>
-          <h6>A Showcase of Innovative Solutions and Real-World Applications.</h6>
+          <h4>MY PROJECTS</h4>
+          <h5>A Showcase of Innovative Solutions and Real-World Applications.</h5>
 
           <Link href="/project" className="pri-btn">
             <h6>Explore more</h6>
@@ -100,7 +96,7 @@ export default function Home() {
           <h3>My Journey Unfiltered</h3>
 
           <div className="blog_sub_head">
-            <h5>I share some updates about my life along with my thoughts on technology and startups.</h5>
+            <h5>I share some updates about my life along with my thoughts on<br/> technology and startups.</h5>
 
             <Link href="/blog" className="pri-btn">
               <h6>Explore more</h6>

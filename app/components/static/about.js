@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function AboutMe(){
   return(
-    <h6 style={{fontWeight: "300"}}>
+    <h5 style={{fontWeight: "300"}}>
       Hi, I'm Abiodun, a software engineer with a diverse background in both UX design and programming. My journey into the world of technology began with a passion for crafting seamless user experiences, which gave me a unique perspective on
       building intuitive, user-centered solutions. After gaining solid UX design experience, I transitioned into software
       development to further enhance my ability to create impactful and innovative solutions.
@@ -18,6 +18,6 @@ export default function AboutMe(){
       software engineer while staying focused on my mission: to use technology as a force for positive change.
       <br/><br/>
       Let us build something meaningful together.
-    </h6>
+    </h5>
   )
 }

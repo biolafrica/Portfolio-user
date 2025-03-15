@@ -39,7 +39,7 @@ export default function ProjectList(){
             </div>
 
             <div className="column_content_body">
-              <h6>A fully responsive blog designed to enhance the online presence of a food delivery brand. Built with a robust stack of JavaScript, Node.js, and Express.js.</h6>
+              <h5>A fully responsive blog designed to enhance the online presence of a food delivery brand. Built with a robust stack of JavaScript.</h5>
             </div>
 
             <Link href="" className="column_content_foot">
@@ -84,7 +84,7 @@ export default function ProjectList(){
             </div>
 
             <div className="column_content_body">
-              <h6>A fully responsive blog designed to enhance the online presence of a food delivery brand. Built with a robust stack of JavaScript, Node.js, and Express.js.</h6>
+              <h5>A fully responsive blog designed to enhance the online presence of a food delivery brand. Built with a robust stack of JavaScript.</h5>
             </div>
 
             <Link href="" className="column_content_foot">
@@ -129,7 +129,7 @@ export default function ProjectList(){
             </div>
 
             <div className="column_content_body">
-              <h6>A fully responsive blog designed to enhance the online presence of a food delivery brand. Built with a robust stack of JavaScript, Node.js, and Express.js.</h6>
+              <h5>A fully responsive blog designed to enhance the online presence of a food delivery brand. Built with a robust stack of JavaScript.</h5>
             </div>
 
             <Link href="" className="column_content_foot">
