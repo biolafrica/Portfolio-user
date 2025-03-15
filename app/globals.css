@@ -393,7 +393,8 @@ nav{
 
 /* project css */
 .Projects{
-  margin: 100px auto;
+  margin: 100px 50px;
+  box-sizing: border-box;
 }
 
 .project-head-cont{
@@ -413,7 +414,7 @@ nav{
 
 .columns{
   display: grid;
-  grid-template-columns:30% 30% 30%;
+  grid-template-columns:33% 33% 33%;
   gap: 20px;
   margin: 50px auto;
   justify-content: center;
@@ -649,6 +650,7 @@ nav{
   }
 
   /*blog*/
+
   .blog_body {
     grid-template-columns: 100%;
   }
@@ -660,13 +662,36 @@ nav{
   }
 
   .Blog {
-    padding: 100px 20px;
+    padding: 20px 20px;
     gap: 30px;
   }
 
   .blog_sub_head {
     flex-direction: column;
     gap: 10px;
+  }
+
+  /*projects*/
+
+  .columns {
+    grid-template-columns: 100%;
+  }
+
+  .Projects {
+    margin: 100px 20px;
+  }
+
+  .column {
+    height: 430px;
+    border-radius: 10px;
+    border: 1px solid var(--Border-dark);
+  }
+
+  /*projects*/
+
+  .footer {
+    margin: 100px auto;
+    text-align: center;
   }
 
 }
@@ -704,6 +729,7 @@ nav{
   }
 
   /* landing css */
+
   .landing{
     width: 70%;
    
@@ -716,6 +742,8 @@ nav{
   .nav-bar{
     display: none;
   }
+
+  /*about me*/
 
   .about-me {
     padding: 100px 0px;
@@ -732,16 +760,14 @@ nav{
 
   }
 
-  .columns {
-    display: grid;
-    grid-template-columns: 50% 50% ;
-    gap: 20px;
-    margin: 50px auto;
-    justify-content: center;
+  /*projects*/
 
+  .columns {
+    grid-template-columns: 50% 50% ;
   }
 
   /*blog*/
+
   .blog_body {
     grid-template-columns: 50% 50%;
   }
