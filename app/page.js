@@ -5,7 +5,8 @@ import BlogList from "./components/common/blogList";
 
 export default function Home() {
   return (
-    <>
+    <div className="home-cont">
+      
       <section className="landing">
 
         <div className="text-cont">
@@ -109,7 +110,7 @@ export default function Home() {
         <BlogList/>
         
       </section>
-    </>
+    </div>
    
   );
 }

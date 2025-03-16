@@ -26,12 +26,12 @@ export default function ProjectList(){
 
                 <div className="lang_image_cont">
                   <img src="/icon/nodejs.svg" alt="stack icon" />
-                  nodejs
+                  node
                 </div>
 
                 <div className="lang_image_cont">
                   <img src="/icon/mongodb.svg" alt="stack icon" />
-                  expressjs
+                  express
                 </div>
 
               </div>
@@ -71,12 +71,12 @@ export default function ProjectList(){
 
                 <div className="lang_image_cont">
                   <img src="/icon/nodejs.svg" alt="stack icon" />
-                  nodejs
+                  node
                 </div>
 
                 <div className="lang_image_cont">
                   <img src="/icon/mongodb.svg" alt="stack icon" />
-                  expressjs
+                  express
                 </div>
 
               </div>
@@ -116,12 +116,12 @@ export default function ProjectList(){
 
                 <div className="lang_image_cont">
                   <img src="/icon/nodejs.svg" alt="stack icon" />
-                  nodejs
+                  node
                 </div>
 
                 <div className="lang_image_cont">
                   <img src="/icon/mongodb.svg" alt="stack icon" />
-                  expressjs
+                  express
                 </div>
 
               </div>
