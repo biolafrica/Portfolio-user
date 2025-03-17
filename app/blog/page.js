@@ -1,5 +1,17 @@
+import BlogsList from "../components/common/blogsList"
+
 export default function Blog(){
   return(
-    <h4>Blog</h4>
+    <div className="blog-cont">
+      <div className="blog-cont-head">
+        <h2><b>The Chronicles of Abiodun</b></h2>
+        <h4>Updates about my life along with my thoughts on technology and startups.</h4>
+      </div>
+      
+      <BlogsList/>
+
+
+    </div>
+   
   )
 }
