@@ -1,3 +1,5 @@
+import Utterances from "@/app/components/common/utterances"
+
 export default function SelectedBlog(){
   return(
     < div className="selected-blog-cont">
@@ -60,11 +62,12 @@ export default function SelectedBlog(){
           </div>
 
         </div>
+
       </div>
 
       <div className="blog-comment-cont">
-        <h4>Comments</h4>
-
+        <Utterances/>
+        
       </div>
     </div>
   )

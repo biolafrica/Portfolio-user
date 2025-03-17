@@ -837,6 +837,26 @@ nav{
 
   }
 
+  .selected-blog-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .blog-comment-cont,
+  .blog-content-cont,
+  .blog-content-footer,
+  .last-post-cont,
+  .next-post-cont {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .blog-content-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 @media(max-width:768px) {
