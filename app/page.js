@@ -12,7 +12,7 @@ export default function Home() {
         <div className="text-cont">
           <h5 className="head-intro-text">Hi, I am</h5>
           <h1>Abiodun Biobaku</h1>
-          <h5 className="sub-intro-text">Software engineer dedicated to innovation,<br/> committed to enriching lives by leveraging the power of <br/> technology to create impactful solutions.</h5>
+          <h5 className="sub-intro-text">A Software engineer dedicated to innovation, and committed <br/> to enriching lives by leveraging the power of technology <br/> to create impactful solutions.</h5>
         </div>
 
         <div className="btn-cont">
