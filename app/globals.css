@@ -558,6 +558,7 @@ nav{
 .project-body-cont-left-context{
   display: flex;
   gap: 30px;
+
 }
 
 .project-body-cont-left-context-left{
@@ -570,6 +571,15 @@ nav{
   gap: 20px;
   box-sizing: border-box;
 }
+
+.project-body-cont-left-context-right{
+  width: 30%;
+  position: sticky;
+  top: 90px;
+  height: 100vh;
+}
+
+
 
 .project-body-cont-left-context-left h5{
   color: var(--Secondary-Text-dark);
@@ -608,6 +618,8 @@ nav{
  width: 70%;
  
 }
+
+
 .head{
   margin-bottom: 20px;
 }
@@ -616,12 +628,14 @@ nav{
   color: var(--Secondary-Text-dark);
   font-weight: 300;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .project-body-comment{
   width: 70%;
   margin-top: 50px;
 }
+
 
 /*blog section css*/
 
@@ -927,6 +941,23 @@ nav{
   .project-cont input {
     width: 50%;
   }
+  .project-body-cont-left-context-right{
+    display: none;
+  }
+
+  .project-body-cont-left-footer {
+    grid-template-columns: 100%;
+    width: 100%;
+
+  }
+
+  .project-body-cont-left-context-left {
+    width: 100%;
+  }
+
+  .project-body-comment {
+    width: 100%;
+  }
 
 
   /*blog*/
@@ -1000,7 +1031,7 @@ nav{
   .selected-blog-cont,
   .selected-project-cont,
   .project-cont {
-    padding: 0px 20px;
+    padding: 0px 10px;
   }
 
   /* landing css */
@@ -1174,6 +1205,25 @@ nav{
   .project-body-cont-left-sub h5 {
     width: 99%;
 
+  }
+
+  .project-body-cont-left-context-right {
+    display: none;
+  }
+
+  .project-body-cont-left-footer {
+    grid-template-columns: 100%;
+    width: 100%;
+
+  }
+
+  .project-body-cont-left-context-left {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .project-body-comment {
+    width: 100%;
   }
 
   /*footer*/
