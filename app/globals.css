@@ -636,6 +636,9 @@ nav{
   margin-top: 50px;
 }
 
+.active{
+  color: #3ecf8e;
+}
 
 /*blog section css*/
 
