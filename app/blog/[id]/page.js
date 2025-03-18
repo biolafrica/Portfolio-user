@@ -17,11 +17,19 @@ export default function SelectedBlog(){
           </h4>
 
           <h5>This International Women’s Day 2025, we celebrate 25 phenomenal women from Nigeria, Ghana, Kenya, and South Africa who are not just shaping their industries but paving new paths for the next generation.</h5>
-          
-          <div className="date">
-            <h6>1st January, 2025</h6>
-            <h6>&bull; 5 minutes read</h6>
+          < div className="date-socials">
+            <div className="date">
+              <h6>1st January, 2025</h6>
+              <h6>&bull; 5 minutes read</h6>
+            </div>
+
+            <div className="share-socials date">
+              <img src="/icons/x.svg" alt="" />
+              <img src="/icons/linked.svg" alt="" />
+            </div>
+
           </div>
+         
 
         </div>
 
