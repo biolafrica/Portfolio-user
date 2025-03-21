@@ -2,8 +2,13 @@ import AboutMe from "./components/static/about";
 import Link from "next/link";
 import ProjectList from "./components/common/projectList";
 import BlogList from "./components/common/blogList";
+import { getBlogs } from "./utils/database/getTasks";
 
-export default function Home() {
+export default async function Home() {
+
+  const blogs = await getBlogs();
+  console.log( "blos details", blogs)
+
   return (
     <div className="home-cont">
       

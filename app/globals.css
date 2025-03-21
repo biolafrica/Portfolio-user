@@ -214,6 +214,11 @@ a{
   padding: 0px 110px;
 }
 
+.not-found {
+  text-align: center;
+  margin: 200px auto;
+}
+
 /* landing page css */
 .landing{
   width: 60%;
@@ -482,13 +487,14 @@ nav{
 
 .column_image img:hover{
   transform: scale(1.05);
+
 }
 
 .column{
   background-color: rgba(255, 255, 255, 0.1);
   height: 470px;
   border-radius: 10px;
-  border: 1px solid var(--Border-dark);
+  border: 1px solid var(--Seperator-dark);
 }
 
 .content_head_lang_cont,
@@ -517,6 +523,9 @@ nav{
 .column_content_foot :hover{
   color: #3ecf8e;
 
+}
+.column:hover{
+  border: 1px solid var(--Border-dark);
 }
 
 .lang_image_cont{
