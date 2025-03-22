@@ -1,16 +1,15 @@
 import ProjectList from "../components/common/projectList"
+import { getProjects } from "../utils/database/getTasks"
+import  ProjectHead from "../components/common/projectHead";
 
-export default function Project(){
+export default async function Project(){
+  const projects = await getProjects();
+
   return(
     <div className="project-cont">
+
+      <ProjectHead projects={projects}/>
       
-      <div className="project-cont-heading">
-        <h2><b>Projects</b></h2>
-        <h5>A showcase of innovative solutions and real world applications</h5>
-        <input type="text" placeholder="search projects" />
-      </div>
-    
-      <ProjectList/>
     </div>
   )
 }

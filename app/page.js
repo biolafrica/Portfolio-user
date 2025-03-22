@@ -1,13 +1,12 @@
 import AboutMe from "./components/static/about";
 import Link from "next/link";
 import ProjectList from "./components/common/projectList";
-import BlogList from "./components/common/blogList";
-import { getBlogs } from "./utils/database/getTasks";
+import BlogList from "./components/common/blogList.jsx";
+import { getProjects } from "./utils/database/getTasks";
 
 export default async function Home() {
-
-  const blogs = await getBlogs();
-  console.log( "blos details", blogs)
+  const projects = await getProjects();
+  const slicedProjects = projects.slice(0, 3);
 
   return (
     <div className="home-cont">
@@ -90,7 +89,7 @@ export default async function Home() {
 
         </div>
 
-        <ProjectList/>
+        <ProjectList projects={slicedProjects}/>
 
       </section>
 

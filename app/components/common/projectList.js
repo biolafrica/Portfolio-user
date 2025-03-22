@@ -1,19 +1,16 @@
 import Link from "next/link"
-import { getProjects } from "@/app/utils/database/getTasks"
 
-export default async function ProjectList(){
-  const projects = await getProjects();
-  console.log(projects)
-  const slicedProjects = projects.slice(0, 3)
+export default function ProjectList({projects}){
 
   return(
+
     <div className="project-body-cont">
 
       <div className="columns">
 
-        {slicedProjects.length !== 0 ? (
+        {projects.length !== 0 ? (
 
-          slicedProjects.map((project)=>(
+          projects.map((project)=>(
 
             <div className="column" key={project.id} >
 
