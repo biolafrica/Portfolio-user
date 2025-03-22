@@ -1,5 +1,6 @@
 import { getBlogs } from "@/app/utils/database/getTasks"
 import formatDate from "@/app/utils/common/fomatDate";
+import Link from "next/link";
 
 export default async function BlogsList(){
   const blogs = await getBlogs();
@@ -10,7 +11,7 @@ export default async function BlogsList(){
        
       {blogs.length !== 0 ? 
         (
-          <div className="blogs-list-head" key={blogs[0].id}>
+          <Link href={`/blog/${blogs[0].id}`} className="blogs-list-head" key={blogs[0].id}>
 
             <div className="list-head-image-cont">
               <img src={`${blogs[0].image}`} alt={`${blogs[0].title} image`} />
@@ -25,7 +26,7 @@ export default async function BlogsList(){
               <h6>&bull; {blogs[0].read} minutes read</h6>
             </div>
         
-          </div>
+          </Link>
 
         ):( <h4>No Blogs available</h4>)
       }
@@ -37,7 +38,7 @@ export default async function BlogsList(){
           (
             filteredBlogs.map((blogs)=>(
 
-              <div className="blogs-list-body-column" key={blogs.id}>
+              <Link href={`/blog/${blogs.id}`} className="blogs-list-body-column" key={blogs.id}>
 
                 <div className="list-head-image-cont">
                   <img src={`${blogs.image}`} alt={`${blogs.title} image`} />
@@ -52,7 +53,7 @@ export default async function BlogsList(){
                   <h6>&bull; {blogs.read} minutes read</h6>
                 </div>
 
-              </div>
+              </Link>
 
             ))
           ) 

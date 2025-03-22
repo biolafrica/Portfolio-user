@@ -14,12 +14,12 @@ export default function Footer(){
         <div className="footer-btn">
 
           <Link href="mailto:biolafrica@gmail.com" className="pri-btn" target="_blank">
-            <img src="icons/Email.svg" alt="" />
+            <img src="/icons/Email.svg" alt="email icon" />
             <h6>Email</h6>
           </Link>
 
           <Link href="https://www.linkedin.com/in/abiobaku/" className="sec-btn" target="_blank">
-            <img src="icons/LinkedIn.svg" alt="" />
+            <img src="/icons/LinkedIn.svg" alt="linkedIn icon" />
             <h6>LinkedIn</h6>
           </Link>
 

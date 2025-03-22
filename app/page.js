@@ -96,9 +96,9 @@ export default async function Home() {
       <section className="Blog">
 
         <div className="blog_heading">
-          <h5>BLOG</h5>
+          <h5 style={{color: "#3ecf8e"}}>BLOG</h5>
           <h3>Tech, Business & Life.</h3>
-          <h3>My Journey Unfiltered</h3>
+          <h3>My Journey Unfiltered.</h3>
 
           <div className="blog_sub_head">
             <h5>I share some updates about my life along with my thoughts on<br/> technology and startups.</h5>
