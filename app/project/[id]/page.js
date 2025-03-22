@@ -1,5 +1,5 @@
 import Utterances from "@/app/components/common/utterances"
-import StickySection from "@/app/components/static/sticky"
+import StickySection from "@/app/components/static/sticky";
 import { getProjects } from "@/app/utils/database/getTasks"
 import getIndex from "@/app/utils/common/getIndex";
 import Link from "next/link";
@@ -8,7 +8,6 @@ export default async function SelectedProject({params}){
   const {id} = await params;
   const projectID = parseInt(id, 10);
   const projects = await getProjects();
-  console.log(projects)
 
   const{data, nextIndex, previousIndex} = getIndex(projects, projectID);
 

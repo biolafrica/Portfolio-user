@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { EmptyProject } from "../static/empty"
 
 export default function ProjectList({projects}){
 
@@ -49,7 +50,7 @@ export default function ProjectList({projects}){
                 </div>
 
                 <Link href={`project/${project.id}`} className="column_content_foot">
-                  <h6>Explore</h6>
+                  <h6>View project</h6>
                   <img src="/icons/Arrow outward.svg" alt="arrow icon" />
                 </Link>
 
@@ -59,7 +60,7 @@ export default function ProjectList({projects}){
           ))
 
         ):(
-          <h4>No Projects</h4>
+          <EmptyProject/>
         )}
 
       </div>

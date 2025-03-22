@@ -1,6 +1,7 @@
 import { getBlogs } from "@/app/utils/database/getTasks"
 import formatDate from "@/app/utils/common/fomatDate";
 import Link from "next/link";
+import { EmptyBlog } from "../static/empty";
 
 export default async function BlogsList(){
   const blogs = await getBlogs();
@@ -28,7 +29,7 @@ export default async function BlogsList(){
         
           </Link>
 
-        ):( <h4>No Blogs available</h4>)
+        ):(<EmptyBlog/> )
       }
 
 

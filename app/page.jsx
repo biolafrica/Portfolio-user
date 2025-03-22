@@ -20,13 +20,17 @@ export default async function Home() {
         </div>
 
         <div className="btn-cont">
-          <button className="pri-btn">
-            <img src="/icons/icon.svg" alt="github icon" />Github
-          </button>
+          <Link href="https://github.com/biolafrica" className="pri-btn" target="_blank">
+            <img src="/icons/icon.svg" alt="github icon" /> <h5>Github</h5>
+          </Link >
 
-          <button className="sec-btn">
-            <img src="/icons/resume.svg" alt="resume icon" />Resume
-          </button>
+          <Link 
+            href="https://drive.google.com/file/d/1UYSntwp4HhE9qku9BDKfSocgY7dS1_PB/view?usp=sharing" 
+            className="sec-btn" 
+            target="_blank"
+          >
+            <img src="/icons/resume.svg" alt="resume icon" /> <h5>Resume</h5>
+          </Link>
         </div>
 
         <div className="stack-cont">
@@ -83,8 +87,7 @@ export default async function Home() {
           <h5>A Showcase of Innovative Solutions and Real-World Applications.</h5>
 
           <Link href="/project" className="pri-btn">
-            <h6>Explore more</h6>
-            <img src="/icons/Arrow forward.svg" alt="next arrow icon" />
+            <h5>View all projects</h5>
           </Link>
 
         </div>
@@ -104,8 +107,7 @@ export default async function Home() {
             <h5>I share some updates about my life along with my thoughts on<br/> technology and startups.</h5>
 
             <Link href="/blog" className="pri-btn">
-              <h6>Explore more</h6>
-              <img src="/icons/Arrow forward.svg" alt="next arrow icon" />
+              <h5>View all blog</h5>
             </Link>
 
           </div>
@@ -114,6 +116,7 @@ export default async function Home() {
         <BlogList/>
         
       </section>
+      
     </div>
    
   );

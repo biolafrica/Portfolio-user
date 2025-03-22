@@ -1,4 +1,3 @@
-import ProjectList from "../components/common/projectList"
 import { getProjects } from "../utils/database/getTasks"
 import  ProjectHead from "../components/common/projectHead";
 
