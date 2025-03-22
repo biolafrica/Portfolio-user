@@ -98,7 +98,7 @@ export default async function Home() {
 
         <div className="blog_heading">
           <h5>BLOG</h5>
-          <h3>Tech Business & Life.</h3>
+          <h3>Tech, Business & Life.</h3>
           <h3>My Journey Unfiltered</h3>
 
           <div className="blog_sub_head">

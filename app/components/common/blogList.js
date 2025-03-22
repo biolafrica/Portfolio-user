@@ -1,51 +1,37 @@
-export default function BlogList(){
+import { getBlogs } from "@/app/utils/database/getTasks"
+import Link from "next/link";
+
+
+export default async function BlogList(){
+
+  const blogs = await getBlogs();
+  const formatDate = (dateStamp)=>{
+    return new Date(dateStamp).toLocaleString("default", {day: "numeric",month: 'long', year:"numeric"});
+  }
+  const slicedBlog = blogs.slice(0, 4);
+
   return(
     <div className="blog_body">
 
-      <div className="blog_body_colum">
+      {slicedBlog.length !== 0 ?(slicedBlog.map((blog)=>(
 
-        <div className="body_column_top">
-          <img src="/images/blog.png" alt="blog post image" />
-        </div>
+        <Link href={`/blog/${blog.id}`} className="blog_body_colum" key={blog.id}>
 
-        <div className="body_column_buttom">
-          <h5>Tech</h5>
-          <h4>2024 Retrospect</h4>
-          <h6>January 1st 2025</h6>
-        </div>
-      
-      </div>
-      
-      <div className="blog_body_colum">
+          <div className="body_column_top">
+            <img src={`${blog.image}`} alt={`${blog.title} image`} />
+          </div>
 
-        <div className="body_column_top">
-          <img src="/images/blog.png" alt="blog post image" />
-        </div>
+          <div className="body_column_buttom">
+            <h5>{blog.type}</h5>
+            <h4>{blog.title}</h4>
+            <h6>{formatDate(blog.created_at)}</h6>
+          </div>
+        
+        </Link>
+        
+      ))):(<h4>No blog available</h4>)}
 
-        <div className="body_column_buttom">
-          <h5>Life</h5>
-          <h4>2024 Retrospect</h4>
-          <h6>January 1st 2025</h6>
-        </div>
-      
-      </div>
-
-      <div className="blog_body_colum">
-
-        <div className="body_column_top">
-          <img src="/images/blog.png" alt="blog post image" />
-        </div>
-
-        <div className="body_column_buttom">
-          <h5>Tech</h5>
-          <h4>2024 Retrospect</h4>
-          <h6>January 1st 2025</h6>
-        </div>
-      
-      </div>
-
-    
-
+  
     </div>
  
   )

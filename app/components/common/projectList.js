@@ -1,145 +1,69 @@
 import Link from "next/link"
+import { getProjects } from "@/app/utils/database/getTasks"
 
-export default function ProjectList(){
+export default async function ProjectList(){
+  const projects = await getProjects();
+  console.log(projects)
+  const slicedProjects = projects.slice(0, 3)
+
   return(
     <div className="project-body-cont">
 
       <div className="columns">
 
-        <div className="column">
+        {slicedProjects.length !== 0 ? (
 
-          <div className="column_image">
-            <img src="/images/project.jpg" alt="project image" />
-          </div>
+          slicedProjects.map((project)=>(
 
-          <div className="column_content">
+            <div className="column" key={project.id} >
 
-            <div className="column_content_head">
-              <h4>Eatup Blog</h4>
+              <div className="column_image">
+                <img src={`${project.image}`} alt={`${project.title} name`} />
+              </div>
 
-              <div className="content_head_lang_cont">
+              <div className="column_content">
 
-                <div className="lang_image_cont">
-                  <img src="icon/javascript.svg" alt="stack icon" />
-                  javascript
+                <div className="column_content_head">
+                  <h4>{project.title}</h4>
+
+                  <div className="content_head_lang_cont">
+
+                    <div className="lang_image_cont">
+                      <img src="icon/javascript.svg" alt="stack icon" />
+                      javascript
+                    </div>
+
+                    <div className="lang_image_cont">
+                      <img src="/icon/nodejs.svg" alt="stack icon" />
+                      node
+                    </div>
+
+                    <div className="lang_image_cont">
+                      <img src="/icon/mongodb.svg" alt="stack icon" />
+                      express
+                    </div>
+
+                  </div>
+
                 </div>
 
-                <div className="lang_image_cont">
-                  <img src="/icon/nodejs.svg" alt="stack icon" />
-                  node
+                <div className="column_content_body">
+                  <h5>{project.sub_title}</h5>
                 </div>
 
-                <div className="lang_image_cont">
-                  <img src="/icon/mongodb.svg" alt="stack icon" />
-                  express
-                </div>
+                <Link href={`project/${project.id}`} className="column_content_foot">
+                  <h6>Explore</h6>
+                  <img src="/icons/Arrow outward.svg" alt="arrow icon" />
+                </Link>
 
               </div>
 
             </div>
+          ))
 
-            <div className="column_content_body">
-              <h5>A fully responsive blog designed to enhance the online presence of a food delivery brand. Built with a robust stack of JavaScript.</h5>
-            </div>
-
-            <Link href="" className="column_content_foot">
-              <h6>Explore</h6>
-              <img src="/icons/Arrow outward.svg" alt="arrow icon" />
-            </Link>
-
-          </div>
-
-        </div>
-
-        <div className="column">
-
-          <div className="column_image">
-            <img src="/images/project.jpg" alt="project image" />
-          </div>
-
-          <div className="column_content">
-
-            <div className="column_content_head">
-              <h4>Eatup Blog</h4>
-
-              <div className="content_head_lang_cont">
-
-                <div className="lang_image_cont">
-                  <img src="icon/javascript.svg" alt="stack icon" />
-                  javascript
-                </div>
-
-                <div className="lang_image_cont">
-                  <img src="/icon/nodejs.svg" alt="stack icon" />
-                  node
-                </div>
-
-                <div className="lang_image_cont">
-                  <img src="/icon/mongodb.svg" alt="stack icon" />
-                  express
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="column_content_body">
-              <h5>A fully responsive blog designed to enhance the online presence of a food delivery brand. Built with a robust stack of JavaScript.</h5>
-            </div>
-
-            <Link href="" className="column_content_foot">
-              <h6>Explore</h6>
-              <img src="/icons/Arrow outward.svg" alt="arrow icon" />
-            </Link>
-
-          </div>
-
-        </div>
-
-        <div className="column">
-
-          <div className="column_image">
-            <img src="/images/project.jpg" alt="project image" />
-          </div>
-
-          <div className="column_content">
-
-            <div className="column_content_head">
-              <h4>Eatup Blog</h4>
-
-              <div className="content_head_lang_cont">
-
-                <div className="lang_image_cont">
-                  <img src="icon/javascript.svg" alt="stack icon" />
-                  javascript
-                </div>
-
-                <div className="lang_image_cont">
-                  <img src="/icon/nodejs.svg" alt="stack icon" />
-                  node
-                </div>
-
-                <div className="lang_image_cont">
-                  <img src="/icon/mongodb.svg" alt="stack icon" />
-                  express
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="column_content_body">
-              <h5>A fully responsive blog designed to enhance the online presence of a food delivery brand. Built with a robust stack of JavaScript.</h5>
-            </div>
-
-            <Link href="" className="column_content_foot">
-              <h6>Explore</h6>
-              <img src="/icons/Arrow outward.svg" alt="arrow icon" />
-            </Link>
-
-          </div>
-
-        </div>
+        ):(
+          <h4>No Projects</h4>
+        )}
 
       </div>
 

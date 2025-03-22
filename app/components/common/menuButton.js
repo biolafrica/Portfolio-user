@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function MenuButton(){
   const [display, setDisplay]= useState("none")
@@ -15,13 +15,20 @@ export default function MenuButton(){
   }
 
 
-  window.addEventListener("resize", ()=>{
-    const screenWidth = window.innerWidth;
-    if(screenWidth > 992){
-      setDisplay("none")
+  useEffect(()=>{
+
+    const onResize = ()=>{
+      const screenWidth = window.innerWidth;
+      if(screenWidth > 992){
+        setDisplay("none")
+      }
+
     }
 
-  })
+    window.addEventListener("resize", onResize)
+
+  }, [])
+
 
   
 
