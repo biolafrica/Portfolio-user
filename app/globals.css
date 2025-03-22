@@ -838,8 +838,11 @@ nav{
   border-radius: 20px;
   margin: 20px 0;
   border: 1px solid var(--Border-dark);
-  
+  white-space: pre-wrap; 
+  color: var(--Secondary-Text-dark);
+  line-height: clamp(21.3px, 3vw, 27px);
 }
+
 
 .blog-content-footer{
   display: grid;
@@ -856,6 +859,7 @@ nav{
   flex-direction: column;
   gap: 15px;
   box-sizing: border-box;
+
 }
 
 .next-post-cont{
