@@ -1,13 +1,11 @@
 import { getBlogs } from "@/app/utils/database/getTasks"
 import Link from "next/link";
+import formatDate from "@/app/utils/common/fomatDate";
 
 
 export default async function BlogList(){
 
   const blogs = await getBlogs();
-  const formatDate = (dateStamp)=>{
-    return new Date(dateStamp).toLocaleString("default", {day: "numeric",month: 'long', year:"numeric"});
-  }
   const slicedBlog = blogs.slice(0, 4);
 
   return(
