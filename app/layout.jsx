@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "./components/nav/header";
 import Footer from "./components/nav/footer";
 
+export const dynamic = "force-dynamic"
+
 
 const manrope = Manrope({
   variable: "--font-manrope",

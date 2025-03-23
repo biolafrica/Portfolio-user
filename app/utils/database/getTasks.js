@@ -9,9 +9,9 @@ export async function getBlogs(){
 
   if(error){
     console.log('Error fetching blog', error.message)
-    throw new Error("Error fetching blog")
+    throw new Error(error)
   }
-  console.log( "server", data)
+
   return (data);
 
 }
@@ -25,7 +25,7 @@ export async function getProjects(){
 
   if(error){
     console.log('Error fetching project', error.message)
-    throw new Error("Error fetching project")
+    throw new Error(error)
   }
 
   return (data);
