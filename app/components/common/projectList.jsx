@@ -27,19 +27,28 @@ export default function ProjectList({projects}){
                   <div className="content_head_lang_cont">
 
                     <div className="lang_image_cont">
-                      <img src="icon/javascript.svg" alt="stack icon" />
-                      javascript
+                      <img src={`icon/${project.stackI}.svg`} alt={`${project.stackI} icon`} />
+                      {project.stackI}
                     </div>
 
-                    <div className="lang_image_cont">
-                      <img src="/icon/nodejs.svg" alt="stack icon" />
-                      node
-                    </div>
+                    {project.stackII && 
+                      (
+                        <div className="lang_image_cont">
+                          <img src={`icon/${project.stackII}.svg`} alt={`${project.stackII} icon`} />
+                          {project.stackII}
+                        </div>
+                      )
+                    }
+                  
+                    {project.stackIII && 
+                      (
+                        <div className="lang_image_cont">
+                          <img src={`icon/${project.stackIII}.svg`} alt={`${project.stackIII} icon`} />
+                          {project.stackIII}
+                        </div>
 
-                    <div className="lang_image_cont">
-                      <img src="/icon/mongodb.svg" alt="stack icon" />
-                      express
-                    </div>
+                      )
+                    }
 
                   </div>
 
