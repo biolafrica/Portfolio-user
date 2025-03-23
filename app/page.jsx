@@ -21,7 +21,7 @@ export default async function Home() {
 
         <div className="btn-cont">
           <Link href="https://github.com/biolafrica" className="pri-btn" target="_blank">
-            <img src="/icons/icon.svg" alt="github icon" /> <h5>Github</h5>
+            <img src="/icons/Icon.svg" alt="github icon" /> <h5>Github</h5>
           </Link >
 
           <Link 
