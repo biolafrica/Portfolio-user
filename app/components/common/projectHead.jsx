@@ -2,6 +2,8 @@
 
 import ProjectList from "./projectList"
 import { useState } from "react"
+import { Suspense } from "react"
+import Loading from "@/app/loading"
 
 export default function ProjectHead({projects}){
   const [searchTerm, setSearchTerm] = useState("")
@@ -24,7 +26,9 @@ export default function ProjectHead({projects}){
 
       </div>
 
-      <ProjectList projects={filteredProjects}/>
+      <Suspense fallback={<Loading/>}>
+        <ProjectList projects={filteredProjects}/>
+      </Suspense>
 
     </>
 

@@ -1,4 +1,7 @@
 import BlogsList from "../components/common/blogsList"
+import { Suspense } from "react"
+import Loading from "../loading"
+
 
 export default function Blog(){
   return(
@@ -7,9 +10,10 @@ export default function Blog(){
         <h2><b>The Chronicles of Abiodun</b></h2>
         <h4>Updates about my life along with my thoughts on technology and startups.</h4>
       </div>
-      
-      <BlogsList/>
-
+    
+      <Suspense fallback={<Loading/>}>
+        <BlogsList/>
+      </Suspense>
 
     </div>
    

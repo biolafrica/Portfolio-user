@@ -3,6 +3,8 @@ import Link from "next/link";
 import ProjectList from "./components/common/projectList";
 import BlogList from "./components/common/blogList.jsx";
 import { getProjects } from "./utils/database/getTasks";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export default async function Home() {
   const projects = await getProjects();
@@ -92,8 +94,10 @@ export default async function Home() {
 
         </div>
 
-        <ProjectList projects={slicedProjects}/>
-
+        <Suspense fallback={<Loading/>}>
+          <ProjectList projects={slicedProjects}/>
+        </Suspense>
+      
       </section>
 
       <section className="Blog">
@@ -113,7 +117,9 @@ export default async function Home() {
           </div>
         </div>
 
-        <BlogList/>
+        <Suspense fallback={<Loading/>}>
+          <BlogList/>
+        </Suspense>
         
       </section>
       
