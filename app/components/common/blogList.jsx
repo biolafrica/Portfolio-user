@@ -10,7 +10,7 @@ export default async function BlogList(){
   const slicedBlog = blogs.slice(0, 4);
 
   return(
-    <div className="blog_body">
+    <div className={slicedBlog.length === 0 ? "" :"blog_body"}>
 
       {slicedBlog.length !== 0 ?
         (slicedBlog.map((blog)=>(
@@ -29,8 +29,7 @@ export default async function BlogList(){
           
           </Link>
         
-        )))
-        :(<EmptyBlog/>)
+        ))):(<EmptyBlog/>)
       }
 
   

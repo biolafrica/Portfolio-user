@@ -17,7 +17,7 @@ export default function AboutMe(){
       activities keep my creativity flowing and my problem solving skills sharp. I am committed to continually growing as a
       software engineer while staying focused on my mission: to use technology as a force for positive change.
       <br/><br/>
-      Let us build something meaningful together.
+     
     </h5>
   )
 }

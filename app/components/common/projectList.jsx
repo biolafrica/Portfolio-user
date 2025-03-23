@@ -7,7 +7,7 @@ export default function ProjectList({projects}){
 
     <div className="project-body-cont">
 
-      <div className="columns">
+      <div className={projects.length === 0 ? "" :"columns"}>
 
         {projects.length !== 0 ? (
 

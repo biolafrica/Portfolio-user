@@ -11,7 +11,7 @@ export function EmptyProject(){
   return(
     <div className="empty-cont">
       <img src="/images/Human.png" alt="people illustration" />
-      <h5>No Blog, yet.</h5>
+      <h5>No Project, yet.</h5>
     </div>
   )
 }
