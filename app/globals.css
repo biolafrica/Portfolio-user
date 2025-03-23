@@ -223,8 +223,12 @@ a{
 .empty-cont{
   margin: 50px auto;
   text-align: center;
-  
 
+}
+
+.loading{
+  margin: 200px auto;
+  text-align: center;
 }
 
 /* landing page css */
