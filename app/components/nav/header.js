@@ -1,5 +1,6 @@
 import Link from "next/link"
 import MenuButton from "../common/menuButton"
+import Image from "next/image"
 
 export default function Header(){
   return(
@@ -7,7 +8,7 @@ export default function Header(){
 
       <nav>
         <Link href="/" className="left">
-          <img src="/icons/Token.svg" alt="abiodun logo" />
+          <Image src="/icons/Token.svg" alt="abiodun logo" width={36} height={36} />
         </Link>
 
         <div className="right">

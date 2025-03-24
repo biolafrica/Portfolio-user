@@ -605,6 +605,7 @@ nav{
 
 .links{
   display: flex;
+  gap: 20px;
 }
 
 .project-body-cont-left-sub h4{
@@ -643,6 +644,7 @@ nav{
 
 .project-body-cont-left-context-left h5{
   color: var(--Secondary-Text-dark);
+  white-space: pre-wrap;
 }
 
 .video_container {
@@ -878,7 +880,6 @@ nav{
   border: 1px solid var(--Border-dark);
   white-space: pre-wrap; 
   color: var(--Secondary-Text-dark);
-  line-height: clamp(21.3px, 3vw, 27px);
 }
 
 

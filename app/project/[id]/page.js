@@ -3,6 +3,7 @@ import StickySection from "@/app/components/static/sticky";
 import { getProjects } from "@/app/utils/database/getTasks"
 import getIndex from "@/app/utils/common/getIndex";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function SelectedProject({params}){
   const {id} = await params;
@@ -15,7 +16,14 @@ export default async function SelectedProject({params}){
     <div className="selected-project-cont">
 
       <div className="project_landing_page">
-        <img src={`${data[0].image}`} alt={`${data[0].title} image`} />
+        <Image 
+          src={`${data[0].image}`} 
+          alt={`${data[0].title} image`}
+          width={1200} 
+          height={600} 
+          style={{objectFit: "cover"}}
+        />
+      
       </div>
 
       <div className="project-body-cont">
@@ -29,11 +37,11 @@ export default async function SelectedProject({params}){
             <div className="links">
           
               <Link href={`${data[0].github_link}`} className="text-btn">
-                <img src="/icons/GitHub.svg" alt="github icon" />Github
+                <Image src="/icons/GitHub.svg" alt="github icon" width={18} height={18} /> <h5>Github</h5>
               </Link>
 
               <Link href={`${data[0].website_link}`} className="text-btn">
-                <img src="/icons/website.svg" alt="website icon" />Website
+                <Image src="/icons/website.svg" alt="website icon" width={18} height={18}/> <h5>Website</h5>
               </Link>
 
             </div>

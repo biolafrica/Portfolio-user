@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image";
 
 export default function Footer(){
   const year = new Date().getFullYear();
@@ -14,12 +15,12 @@ export default function Footer(){
         <div className="footer-btn">
 
           <Link href="mailto:biolafrica@gmail.com" className="pri-btn" target="_blank">
-            <img src="icons/Email.svg" alt="" />
+            <Image src="/icons/Email.svg" alt="email icon" width={24} height={24} />
             <h6>Email</h6>
           </Link>
 
           <Link href="https://www.linkedin.com/in/abiobaku/" className="sec-btn" target="_blank">
-            <img src="icons/LinkedIn.svg" alt="" />
+            <Image src="/icons/LinkedIn.svg" alt="linkedin icon" width={24} height={24} />
             <h6>LinkedIn</h6>
           </Link>
 

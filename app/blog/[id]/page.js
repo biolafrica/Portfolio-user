@@ -4,6 +4,7 @@ import formatDate from "@/app/utils/common/fomatDate";
 import SharePost from "@/app/components/common/share";
 import getIndex from "@/app/utils/common/getIndex";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function SelectedBlog({params}){
   const {id} = await params;
@@ -19,7 +20,13 @@ export default async function SelectedBlog({params}){
         <div className="blog-content-cont" key={data[0].id}>
 
           <div className="blog-content-image">
-            <img src={`${data[0].image}`} alt={`${data[0].title} image`} />
+            <Image 
+              src={`${data[0].image}`} 
+              alt={`${data[0].title} image`} 
+              width={1200} 
+              height={600} 
+            />
+
           </div>
 
           <div className="blog-content-sub-content">
