@@ -29,7 +29,7 @@ export default async function SelectedProject({params}){
             <div className="links">
           
               <Link href={`${data[0].github_link}`} className="text-btn">
-                <img src="/icons/Github.svg" alt="github icon" />Github
+                <img src="/icons/GitHub.svg" alt="github icon" />Github
               </Link>
 
               <Link href={`${data[0].website_link}`} className="text-btn">

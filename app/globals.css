@@ -704,6 +704,15 @@ nav{
   color: #3ecf8e;
 }
 
+.intro h5,
+.journey h5,
+.build h5,
+.outcome h5,
+.future h5{
+  white-space: pre-wrap;
+
+}
+
 /*blog section css*/
 
 .Blog{
