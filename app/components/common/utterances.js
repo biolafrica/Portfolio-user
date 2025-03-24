@@ -15,7 +15,7 @@ export default function Utterances() {
 
     const script = document.createElement("script");
     script.src = "https://utteranc.es/client.js";
-    script.setAttribute("repo", "biolafrica/abiodun-portfolio");
+    script.setAttribute("repo", "biolafrica/Portfolio-user");
     script.setAttribute("issue-term", "url");
     script.setAttribute("theme", "github-dark");
     script.setAttribute("crossorigin", "anonymous");
