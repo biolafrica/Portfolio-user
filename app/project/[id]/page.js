@@ -19,9 +19,9 @@ export default async function SelectedProject({params}){
         <Image 
           src={`${data[0].image}`} 
           alt={`${data[0].title} image`}
-          width={1200} 
+          width={1000}
           height={600} 
-          style={{objectFit: "cover"}}
+          style={{objectFit: "contain"}}
         />
       
       </div>

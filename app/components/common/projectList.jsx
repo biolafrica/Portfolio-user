@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { EmptyProject } from "../static/empty"
+import Image from "next/image"
 
 export default function ProjectList({projects}){
 
@@ -16,7 +17,14 @@ export default function ProjectList({projects}){
             <div className="column" key={project.id} >
 
               <div className="column_image">
-                <img src={`${project.image}`} alt={`${project.title} name`} />
+                <Image
+                  src={`${project.image}`} 
+                  alt={`${project.title} name`}
+                  width={400}
+                  height={600} 
+                  style={{objectFit: "cover"}}
+
+                />
               </div>
 
               <div className="column_content">

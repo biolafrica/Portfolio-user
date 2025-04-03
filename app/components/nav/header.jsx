@@ -3,8 +3,7 @@ import MenuButton from "../common/menuButton"
 
 export default function Header(){
   return(
-    <div>
-
+    <div className="header-cont">
       <nav>
         <Link href="/" className="left">
           <img src="/icons/Token.svg" alt="abiodun logo" />
@@ -14,14 +13,12 @@ export default function Header(){
           <Link href="/">Home</Link>
           <Link href="/project">Projects</Link>
           <Link href="/blog">Blog</Link>
+          <MenuButton/>
         </div>
         
-        <MenuButton/>
       </nav>
-
-
-
     </div>
+  
   )
 
 }

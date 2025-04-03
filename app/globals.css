@@ -3,7 +3,10 @@ body{
   background-color: #000000FF;
   color: var(--Text-dark);
   font-weight: 200;
-  padding-top: 60px;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+
 }
 
 :root{
@@ -238,6 +241,7 @@ a{
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -273,15 +277,20 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
   padding: 10px 150px;
   border-bottom: 1px solid var(--Border-dark);
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   background-color: black;
   z-index: 1000;
+  overflow-x: hidden;
+
 }
+
+
 
 .right{
   display: flex;
@@ -494,7 +503,6 @@ nav{
 .column_image img{
   height: 100%;
   width: 100%;
-  object-fit: cover;
   border-radius: 10px 10px 0px 0px ;
   transition: transform 0.4s ease-in-out;
 }
@@ -588,15 +596,16 @@ nav{
 }
 
 .project_landing_page{
-  width: 100%;
-  height: 500px;
+  width: fit-content;
+  height: fit-content;
   margin: 20px auto;
   overflow: hidden;
-
 }
 
 .project_landing_page img{
   transition: transform 0.4s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
 .project_landing_page:hover{
@@ -784,6 +793,10 @@ nav{
   justify-content: space-between;
 }
 
+.blog_sub_text {
+  width: 50%;
+}
+
 .list-head-image-cont{
   width: 100%;
   height: 620px;
@@ -797,7 +810,7 @@ nav{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: transform 0.4s ease-in-out;
 }
 
@@ -1082,6 +1095,10 @@ nav{
     flex-direction: column;
   }
 
+  .blog_sub_text{
+    width: 60%;
+  }
+
 }
 
 @media(max-width:768px) {
@@ -1121,15 +1138,19 @@ nav{
   .selected-blog-cont,
   .selected-project-cont,
   .project-cont {
-    padding: 0px 10px;
+    padding: 0px 15px;
+
   }
+
 
   /* landing css */
 
   .landing{
     width: 100%;
-    margin-bottom: 100px;
+    margin: 50px auto;
+    text-align: center;
   }
+
 
   .stack_cont {
     margin: 50px auto 10px auto;
@@ -1141,10 +1162,15 @@ nav{
 
   .hamburger{
     display: flex;
+
   }
 
   nav {
     padding: 10px 20px;
+  }
+
+  .sub-intro-text{
+   padding: 0px 30px;
   }
 
   /* small screen navbar css */
@@ -1261,11 +1287,16 @@ nav{
     display: flex;
     flex-direction: column;
   }
-  
+
+  .blog_sub_text {
+    width: 80%;
+  }
+
   /*projects*/
 
   .columns {
     grid-template-columns: 100%;
+    gap: 50px;
   }
 
   .Projects {

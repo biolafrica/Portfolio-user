@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-GB" style={{transitionProperty: "none", marginRight: "0px"}} >
+    <html lang="en-GB" style={{transitionProperty: "none", marginRight: "0"}} >
       <body className={manrope.className}>
         <Header/>
         {children}

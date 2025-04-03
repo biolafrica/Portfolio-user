@@ -18,7 +18,7 @@ export default async function Home() {
         <div className="text-cont">
           <h5 className="head-intro-text">Hi, I am</h5>
           <h1>Abiodun Biobaku</h1>
-          <h5 className="sub-intro-text">A Software engineer dedicated to innovation, and committed <br/> to enriching lives by leveraging the power of technology <br/> to create impactful solutions.</h5>
+          <h5 className="sub-intro-text">A Software engineer dedicated to innovation, and committed to enriching lives by leveraging the power of technology to create impactful solutions.</h5>
         </div>
 
         <div className="btn-cont">
@@ -108,7 +108,7 @@ export default async function Home() {
           <h3>My Journey Unfiltered.</h3>
 
           <div className="blog_sub_head">
-            <h5>I share some updates about my life along with my thoughts on<br/> technology and startups.</h5>
+            <h5 className="blog_sub_text">I share some updates about my life along with my thoughts on technology and startups.</h5>
 
             <Link href="/blog" className="pri-btn">
               <h5>View all blog</h5>
