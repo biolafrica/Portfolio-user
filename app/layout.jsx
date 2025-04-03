@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/nav/header";
 import Footer from "./components/nav/footer";
 import {SpeedInsights} from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export const dynamic = "force-dynamic"
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         <Header/>
         {children}
         <SpeedInsights/>
+        <Analytics/>
         <Footer/>
       </body>
     </html>
