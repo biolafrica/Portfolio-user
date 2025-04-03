@@ -2,6 +2,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "./components/nav/header";
 import Footer from "./components/nav/footer";
+import {SpeedInsights} from "@vercel/speed-insights/next"
 
 export const dynamic = "force-dynamic"
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       <body className={manrope.className}>
         <Header/>
         {children}
+        <SpeedInsights/>
         <Footer/>
       </body>
     </html>
