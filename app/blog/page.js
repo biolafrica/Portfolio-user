@@ -5,6 +5,7 @@ import Loading from "../loading"
 
 export default function Blog(){
   return(
+ 
     <div className="blog-cont">
       <div className="blog-cont-head">
         <h2><b>The Chronicles of Abiodun</b></h2>

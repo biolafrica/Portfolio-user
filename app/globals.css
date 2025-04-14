@@ -230,7 +230,7 @@ a{
 }
 
 .loading{
-  margin: 200px auto;
+  margin: -150px auto;
   text-align: center;
 }
 
@@ -1099,6 +1099,10 @@ nav{
     width: 60%;
   }
 
+  .loading {
+    margin: 50px auto;
+  }
+
 }
 
 @media(max-width:768px) {
@@ -1352,6 +1356,10 @@ nav{
   .footer {
     margin: 100px auto;
     text-align: center;
+  }
+
+  .loading {
+    margin: 50px auto;
   }
 
 }
