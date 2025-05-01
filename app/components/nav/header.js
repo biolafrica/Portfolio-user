@@ -8,7 +8,7 @@ export default function Header(){
 
       <nav>
         <Link href="/" className="left">
-          <Image src="/icons/Token.svg" alt="abiodun logo" width={36} height={36} />
+          <Image src="/images/Frame 1145.png" alt="abiodun logo" width={36} height={36} />
         </Link>
 
         <div className="right">

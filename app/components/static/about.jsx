@@ -1,23 +1,16 @@
-"use client"
-
-import Link from "next/link"
 
 export default function AboutMe(){
   return(
-    <h5 style={{fontWeight: "300"}}>
-      Hi, I'm Abiodun, a software engineer with a diverse background in both UX design and programming. My journey into the world of technology began with a passion for crafting seamless user experiences, which gave me a unique perspective on
-      building intuitive, user-centered solutions. After gaining solid UX design experience, I transitioned into software
-      development to further enhance my ability to create impactful and innovative solutions.
-      <br/><br/>
-      Throughout my career, I have had the opportunity to work with organizations like <Link href="https://www.eatup.ng/" style={{color:"#3ecf8e"}}>EatUp Food Services</Link>, and <Link style={{color:"#3ecf8e"}} href="https://www.16bags.com/">16bags</Link> where I contributed to building and improving digital products that align with user needs and business goals. My blend of UX
-      expertise and software engineering skills enables me to not only develop functional systems but also ensure they deliver
-      great user experiences.
-      <br/><br/>
-      When I am not coding, I love playing games, tuning into business and technology podcasts, and hitting the gym. These
-      activities keep my creativity flowing and my problem solving skills sharp. I am committed to continually growing as a
-      software engineer while staying focused on my mission: to use technology as a force for positive change.
-      <br/><br/>
-     
+    <h5 className="about-text" style={{fontWeight: "300"}}>
+      I started my journey into tech not through formal academia, but through curiosity and grit. While studying procurement and supply chain management, I kept gravitating toward systems — how things worked, how they could be automated, and how teams could operate more efficiently with the right tools. That curiosity led me to web development, where I found the perfect intersection of logic, creativity, and impact.
+
+      Today, I'm a frontend-focused software engineer with a growing full-stack skill set. I’ve designed and built internal tools for startups, including a real-time payroll and attendance tracking system, a dynamic company blog platform, and a peer-to-peer currency exchange app with real-time pricing updates and secure payments. These projects taught me not only how to write maintainable code, but how to solve real problems for real users.
+
+      What drives me is building products that are fast, accessible, and reliable — whether that’s a tool for internal operations or a consumer-facing web app. I’m comfortable working with React, Next.js, Node.js, and MongoDB, and I thrive in collaborative, agile teams where ideas move fast and ownership is shared.
+
+      I’m currently looking for opportunities to grow as a frontend engineer in a high-impact startup or fintech environment — especially teams that value clean design, fast iteration, and user-first thinking.
+
+      If that sounds like you, let’s talk.
     </h5>
   )
 }

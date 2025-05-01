@@ -16,14 +16,13 @@ export default async function Home() {
       <section className="landing">
 
         <div className="text-cont">
-          <h5 className="head-intro-text">Hi, I am</h5>
-          <h1>Abiodun Biobaku</h1>
-          <h5 className="sub-intro-text">A Software engineer dedicated to innovation, and committed to enriching lives by leveraging the power of technology to create impactful solutions.</h5>
+          <h2><b>Frontend Software Engineer Building Fast, Scalable Web Experiences with React & Node.js.</b></h2>
+          <h4 className="sub-intro-text">I’m Abiodun Biobaku, I design and build seamless web apps for startups and teams, from real-time payroll tools to marketplace connecting business owners. I turn business needs into performant code, one sprint at a time.</h4>
         </div>
 
         <div className="btn-cont">
-          <Link href="https://github.com/biolafrica" className="pri-btn" target="_blank">
-            <img src="/icons/Icon.svg" alt="github icon" /> <h5>Github</h5>
+          <Link href="mailto:biolafrica@gmail.com" className="pri-btn" target="_blank">
+            <img src="/icons/Email.svg" alt="github icon" /> <h5>Hire Me</h5>
           </Link >
 
           <Link 
@@ -31,35 +30,10 @@ export default async function Home() {
             className="sec-btn" 
             target="_blank"
           >
-            <img src="/icons/resume.svg" alt="resume icon" /> <h5>Resume</h5>
+            <img src="/icons/resume.svg" alt="resume icon" /> <h5>View Resume</h5>
           </Link>
         </div>
-
-        <div className="stack-cont">
-          <div className="stack_cont">
-            <div className="scrolling_wrapper">
-              <img src="/images/javascript.svg" alt="javascript icon" />
-              <img src="/images/react.svg" alt="reactjs icon" />
-              <img src="/images/next 1.svg" alt="nextjs icon" />
-              <img src="/images/nodejs_logo.svg" alt="nodejs icon" />
-              <img src="/images/mongodb_logo.svg" alt="mongodb icon" />
-              <img src="/images/Express.svg" alt="expressjs icon" />
-              <img src="/images/typescript.svg" alt="typescript icon" />
-              
-              <img src="/images/javascript.svg" alt="javascript icon" />
-              <img src="/images/react.svg" alt="reactjs icon" />
-              <img src="/images/next 1.svg" alt="nextjs icon" />
-              <img src="/images/nodejs_logo.svg" alt="nodejs icon" />
-              <img src="/images/mongodb_logo.svg" alt="mongodb icon" />
-              <img src="/images/Express.svg" alt="expressjs icon" />
-              <img src="/images/typescript.svg" alt="typescript icon" />
-            </div>
-          </div>
-
-          <h6>Currently specializing in MERN stack</h6>
-        
-        </div>
-
+     
       </section>
 
       <section className="about-me">

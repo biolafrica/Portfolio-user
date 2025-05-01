@@ -15,7 +15,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: "Abiodun Biobaku | Software Engineer",
+  title: "Abiodun Biobaku | Web Developer UK",
   description: "Abiodun Biobaku Portfolio",
 };
 

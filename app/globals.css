@@ -236,18 +236,19 @@ a{
 
 /* landing page css */
 .landing{
-  width: 60%;
-  margin: 100px auto;
-  text-align: center;
+  width: 70%;
+  margin: 150px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
 }
+
 
 
 .sub-intro-text{
   color: var(--Secondary-Text-dark);
+  margin-top: 20px;
 
 }
 
@@ -259,8 +260,6 @@ a{
 .btn-cont{
   display: flex;
   gap: 20px;
-  margin: 0px auto;
-
 }
 
 .stack{
@@ -289,8 +288,6 @@ nav{
   overflow-x: hidden;
 
 }
-
-
 
 .right{
   display: flex;
@@ -325,59 +322,6 @@ nav{
 }
 
 
-/* stack animation css */
-
-.stack_cont {
-  display: flex;
-  overflow: hidden;
-  width: 70%;
-  white-space: nowrap;
-  position: relative;
-  margin: 100px auto 10px auto;
-}
-
-.stack_cont::before,
-.stack_cont::after {
-  content: "";
-  position: absolute;
-  width: 10%;
-  height: 100%;
-  z-index: 2;
-}
-
-.stack_cont::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-}
-
-.stack_cont::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-}
-
-.scrolling_wrapper {
-  display: flex;
-  animation: scroll 20s linear infinite;
-  margin: 0 auto;
-}
-
-.scrolling_wrapper img {
-  width: 80px;
-  margin: 0 20px;
-  object-fit: contain;
-}
-
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 /* About me css */
 
 .about-me{
@@ -390,6 +334,10 @@ nav{
   gap: 20px;
   height: 900px;
 
+}
+
+.about-text{
+  white-space: pre-wrap;
 }
 
 .about-me-cont-text{
@@ -999,7 +947,7 @@ nav{
   /* landing css */
 
   .landing {
-    width: 70%;
+    width: 80%;
 
   }
 
@@ -1150,9 +1098,8 @@ nav{
   /* landing css */
 
   .landing{
-    width: 100%;
-    margin: 50px auto;
-    text-align: center;
+    width: 95%;
+    margin: 50px 0px;
   }
 
 
@@ -1173,9 +1120,6 @@ nav{
     padding: 10px 20px;
   }
 
-  .sub-intro-text{
-   padding: 0px 30px;
-  }
 
   /* small screen navbar css */
   .nav-bar {
