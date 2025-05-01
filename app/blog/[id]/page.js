@@ -40,7 +40,7 @@ export default async function SelectedBlog({params}){
             < div className="date-socials">
               <div className="date">
                 <h6>{formatDate(data[0].created_at)}</h6>
-                <h6>&bull; {data.read} minutes read</h6>
+                <h6>&bull; {data[0].read} minutes read</h6>
               </div>
 
               <SharePost blog={data}/>

@@ -333,11 +333,11 @@ nav{
   justify-content: center;
   gap: 20px;
   height: 900px;
-
 }
 
 .about-text{
   white-space: pre-wrap;
+  font-weight: 300;
 }
 
 .about-me-cont-text{
@@ -842,6 +842,10 @@ nav{
   white-space: pre-wrap; 
   color: var(--Secondary-Text-dark);
 }
+.blog-content-content h5{
+  white-space: pre-wrap;
+
+}
 
 
 .blog-content-footer{
@@ -888,6 +892,9 @@ nav{
 .blog-content-image {
   width: 100%;
   height: 500px;
+  border: 1px solid var(--Border-dark);
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 .date-socials{

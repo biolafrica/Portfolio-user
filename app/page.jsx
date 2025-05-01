@@ -17,7 +17,7 @@ export default async function Home() {
 
         <div className="text-cont">
           <h2><b>Frontend Software Engineer Building Fast, Scalable Web Experiences with React & Node.js.</b></h2>
-          <h4 className="sub-intro-text">I’m Abiodun Biobaku, I design and build seamless web apps for startups and teams, from real-time payroll tools to marketplace connecting business owners. I turn business needs into performant code, one sprint at a time.</h4>
+          <h4 className="sub-intro-text">I&lsquo;m Abiodun Biobaku, I design and build seamless web apps for startups and teams, from real-time payroll tools to marketplace connecting business owners. I turn business needs into performant code, one sprint at a time.</h4>
         </div>
 
         <div className="btn-cont">
@@ -63,7 +63,7 @@ export default async function Home() {
           <h5>A Showcase of Innovative Solutions and Real-World Applications.</h5>
 
           <Link href="/project" className="pri-btn">
-            <h5>View all projects</h5>
+            <h5 style={{color: "white"}}>View all projects</h5>
           </Link>
 
         </div>

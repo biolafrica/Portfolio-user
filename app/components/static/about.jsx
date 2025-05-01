@@ -11,6 +11,7 @@ export default function AboutMe(){
       I’m currently looking for opportunities to grow as a frontend engineer in a high-impact startup or fintech environment — especially teams that value clean design, fast iteration, and user-first thinking.
 
       If that sounds like you, let’s talk.
+
     </h5>
   )
 }
