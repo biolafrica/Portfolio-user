@@ -85,7 +85,7 @@ export default async function Home() {
             <h5 className="blog_sub_text">I share some updates about my life along with my thoughts on technology and startups.</h5>
 
             <Link href="/blog" className="pri-btn">
-              <h5>View all blog</h5>
+              <h5 style={{color: "white"}}>View all blog</h5>
             </Link>
 
           </div>

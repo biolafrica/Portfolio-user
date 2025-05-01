@@ -5,6 +5,7 @@ import SharePost from "@/app/components/common/share";
 import getIndex from "@/app/utils/common/getIndex";
 import Link from "next/link";
 import Image from "next/image";
+import { marked } from "marked";
 
 export default async function SelectedBlog({params}){
   const {id} = await params;
@@ -51,7 +52,7 @@ export default async function SelectedBlog({params}){
           </div>
 
           <div className="blog-content-content">
-            <h5 style={{fontWeight: "300"}}>{data[0].content}</h5>
+            <h5 style={{fontWeight: "400"}} dangerouslySetInnerHTML={{ __html: marked.parse(data[0].content) }}/>
           </div>
 
           <div className="blog-content-footer">
@@ -92,11 +93,8 @@ export default async function SelectedBlog({params}){
 
       )}
 
-    
-
       <div className="blog-comment-cont">
         <Utterances/>
-        
       </div>
     </div>
   )

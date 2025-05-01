@@ -1043,6 +1043,8 @@ nav{
   .next-post-cont {
     width: 100%;
     box-sizing: border-box;
+    height: fit-content;
+
   }
 
   .blog-content-footer {
@@ -1235,7 +1237,9 @@ nav{
   .last-post-cont,
   .next-post-cont{
     width: 100%;
+    height: fit-content;
     box-sizing: border-box;
+
   }
 
   .blog-content-footer{
