@@ -750,6 +750,9 @@ nav{
   height: 620px;
   display: inline-block;
   overflow: hidden;
+  border: 1px solid var(--Border-dark);
+  border-radius: 10px;
+  box-shadow: var(--elevate-1);
 }
 
 .list-head-image-cont img,
