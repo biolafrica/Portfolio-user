@@ -25,7 +25,8 @@ export default async function SelectedBlog({params}){
               src={`${data[0].image}`} 
               alt={`${data[0].title} image`} 
               width={1200} 
-              height={600} 
+              height={600}
+              style={{objectFit: "contain"}} 
             />
 
           </div>

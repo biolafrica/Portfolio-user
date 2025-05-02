@@ -2,6 +2,7 @@ import { getBlogs } from "@/app/utils/database/getTasks"
 import formatDate from "@/app/utils/common/fomatDate";
 import Link from "next/link";
 import { EmptyBlog } from "../static/empty";
+import Image from "next/image";
 
 export default async function BlogsList(){
   const blogs = await getBlogs();
@@ -16,6 +17,7 @@ export default async function BlogsList(){
 
             <div className="list-head-image-cont">
               <img src={`${blogs[0].image}`} alt={`${blogs[0].title} image`} />
+              
             </div>
 
             <h6 style={{color: "#3ecf8e"}}>{blogs[0].type}</h6>

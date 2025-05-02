@@ -24,7 +24,7 @@ export default function Utterances() {
     container.appendChild(script);
   }, [pathname]);
 
-  return <div id="utterances-container" />;
+  return(<div id="utterances-container" />)
 }
 
 
