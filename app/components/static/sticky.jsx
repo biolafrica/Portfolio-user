@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { marked } from "marked";
 
 export default function StickySection({data}){
 
@@ -53,23 +54,31 @@ export default function StickySection({data}){
       <div className="project-body-cont-left-context-left">
 
         <section className="intro" id={sections[0].id}>
+
           <h4><b>The Hook: Introduction and Context</b></h4>
-          <h5>{sections[0].body}</h5>
+          <h5 dangerouslySetInnerHTML={{ __html: marked.parse(sections[0].body) }} />
+
         </section>
 
         <section className="journey" id={sections[1].id}>
+
           <h4><b>The Journey: Development Process & Challenges</b></h4>
-          <h5>{sections[1].body}</h5>
+          <h5 dangerouslySetInnerHTML={{ __html: marked.parse(sections[1].body) }}/>
+
         </section>
 
         <section className="build" id={sections[2].id}>
+
           <h4><b>The Build: Technical Implementation & Stack</b></h4>
-          <h5>{sections[2].body}</h5>
+          <h5 dangerouslySetInnerHTML={{ __html: marked.parse(sections[2].body) }} />
+
         </section>
 
         <section className="outcome" id={sections[3].id}>
+
           <h4><b>The Outcome: Results & Impact</b></h4>
-          <h5>{sections[3].body}</h5>
+          <h5 dangerouslySetInnerHTML={{ __html: marked.parse(sections[3].body) }} />
+
         </section>
 
         <section className="video" id={sections[4].id}>
@@ -85,7 +94,7 @@ export default function StickySection({data}){
 
         <section className="future" id={sections[5].id}>
           <h4><b>The Future: Next Steps & Reflections</b></h4>
-          <h5>{sections[5].body}</h5>
+          <h5 dangerouslySetInnerHTML={{ __html: marked.parse(sections[5].body) }} />
         </section>
       
       </div>

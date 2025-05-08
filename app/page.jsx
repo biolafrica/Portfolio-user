@@ -52,6 +52,7 @@ export default async function Home() {
           <div className="about-me-cont-image">
            <img src="/images/me.jpeg" alt="abiodun headshot" />
           </div>
+          
         </div>
       </section>
 

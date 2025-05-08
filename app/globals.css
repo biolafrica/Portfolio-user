@@ -326,6 +326,7 @@ nav{
 
 .about-me{
   padding: 100px 0px;
+  overflow: hidden;
 }
 
 .about-me-cont{
@@ -333,6 +334,7 @@ nav{
   justify-content: center;
   gap: 20px;
   height: 900px;
+  overflow: hidden;
 }
 
 .about-text{
@@ -354,6 +356,7 @@ nav{
 .about-me-cont-image{
   width: 40%;
   height: 100%;
+  border-radius: 10px;
   display: inline-block;
   overflow: hidden;
 }
@@ -361,7 +364,6 @@ nav{
 .about-me-cont-image img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   object-fit: cover;
   transition: transform 0.4s ease-in-out;
 }
@@ -465,6 +467,7 @@ nav{
   height: 410px;
   border-radius: 10px;
   border: 1px solid var(--Seperator-dark);
+  overflow: hidden;
 }
 
 .content_head_lang_cont,
@@ -601,7 +604,7 @@ nav{
 
 .project-body-cont-left-context-left h5{
   color: var(--Secondary-Text-dark);
-  white-space: pre-wrap;
+ 
 }
 
 .video_container {
@@ -663,14 +666,6 @@ nav{
   color: #3ecf8e;
 }
 
-.intro h5,
-.journey h5,
-.build h5,
-.outcome h5,
-.future h5{
-  white-space: pre-wrap;
-
-}
 
 /*blog section css*/
 
@@ -843,13 +838,9 @@ nav{
   border-radius: 20px;
   margin: 20px 0;
   border: 1px solid var(--Border-dark);
-  white-space: pre-wrap; 
   color: var(--Secondary-Text-dark);
 }
-.blog-content-content h5{
-  white-space: pre-wrap;
 
-}
 
 
 .blog-content-footer{

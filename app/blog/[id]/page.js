@@ -6,6 +6,17 @@ import getIndex from "@/app/utils/common/getIndex";
 import Link from "next/link";
 import Image from "next/image";
 import { marked } from "marked";
+import { getBlog } from "@/app/utils/database/getTask";
+
+export async function generateMetadata({params}){
+  const {id} = await params;
+  const blog = await getBlog(id)
+
+  return{
+    title: `Abiodun Chronicles | ${blog.title}`
+  }
+
+}
 
 export default async function SelectedBlog({params}){
   const {id} = await params;

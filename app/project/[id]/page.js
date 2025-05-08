@@ -4,6 +4,17 @@ import { getProjects } from "@/app/utils/database/getTasks"
 import getIndex from "@/app/utils/common/getIndex";
 import Link from "next/link";
 import Image from "next/image";
+import { getProject } from "@/app/utils/database/getTask";
+
+export async function generateMetadata({params}){
+  const {id} = await params;
+  const project = await getProject(id)
+
+  return{
+    title: `Abiodun Project | ${project.title}`
+  }
+
+}
 
 export default async function SelectedProject({params}){
   const {id} = await params;
@@ -65,7 +76,6 @@ export default async function SelectedProject({params}){
               )
             }
 
-
             {nextIndex <= (projects.length-1) && 
               (
 
@@ -78,8 +88,7 @@ export default async function SelectedProject({params}){
 
               )
             }
-
-
+            
           </div>
 
           <div className="project-body-comment">
