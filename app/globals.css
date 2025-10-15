@@ -5,8 +5,6 @@
 
 /* general css */
 body{
-  background-color: #000000FF;
-  color: var(--Text-dark);
   font-weight: 200;
   overflow-x: hidden;
   padding: 0;
@@ -210,12 +208,11 @@ button img{
 
 a{
   text-decoration: none;
-  color: var(--Text-dark);
   font-weight: 500;
 
 }
 
-.home-cont,
+
 .blog-cont,
 .project-cont,
 .selected-blog-cont,
@@ -283,14 +280,13 @@ nav{
   align-items: center;
   height: 50px;
   padding: 10px 150px;
-  border-bottom: 1px solid var(--Border-dark);
   position: relative;
   top: 0;
   left: 0;
   right: 0;
-  background-color: black;
   z-index: 1000;
   overflow-x: hidden;
+  background-color: transparent;
 
 }
 
@@ -936,7 +932,6 @@ nav{
     letter-spacing: 0.7%;
   }
 
-  .home-cont,
   .blog-cont,
   .selected-blog-cont,
   .selected-project-cont,
@@ -1093,7 +1088,6 @@ nav{
     letter-spacing: 0.6%;
   }
 
-  .home-cont,
   .blog-cont,
   .selected-blog-cont,
   .selected-project-cont,

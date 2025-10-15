@@ -9,7 +9,7 @@ export default function Header(){
           <img src="/icons/Token.svg" alt="abiodun logo" />
         </Link>
 
-        <div className="right">
+        <div className="right ">
           <Link href="/">Home</Link>
           <Link href="/project">Projects</Link>
           <Link href="/blog">Blog</Link>

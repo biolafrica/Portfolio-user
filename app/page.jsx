@@ -5,6 +5,7 @@ import BlogList from "./components/common/blogList.jsx";
 import { getProjects } from "./utils/database/getTasks";
 import { Suspense } from "react";
 import Loading from "./loading";
+import HeroSection from "./components/common/heroSection";
 
 export default async function Home() {
   const projects = await getProjects();
@@ -13,7 +14,7 @@ export default async function Home() {
   return (
     <div className="home-cont">
       
-      <section className="landing">
+      {/* {<section className="landing">
 
         <div className="text-cont">
           <h2><b>Frontend Software Engineer Building Fast, Scalable Web Experiences with React & Node.js.</b></h2>
@@ -34,11 +35,11 @@ export default async function Home() {
           </Link>
         </div>
      
-      </section>
+      </section>} */}
 
-      
+      <HeroSection/>
 
-      <section className="about-me">
+      {/* <section className="about-me">
         <div className="about-me-cont">
 
           <div className="about-me-cont-text">
@@ -56,7 +57,7 @@ export default async function Home() {
           </div>
           
         </div>
-      </section>
+      </section>*/}
 
       <section className="Projects">
          

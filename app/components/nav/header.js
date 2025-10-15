@@ -5,7 +5,6 @@ import Image from "next/image"
 export default function Header(){
   return(
     <div>
-
       <nav>
         <Link href="/" className="left">
           <Image src="/images/Frame 1145.png" alt="abiodun logo" width={36} height={36} />
@@ -19,8 +18,6 @@ export default function Header(){
         
         <MenuButton/>
       </nav>
-
-
 
     </div>
   )
