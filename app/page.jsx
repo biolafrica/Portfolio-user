@@ -36,6 +36,8 @@ export default async function Home() {
      
       </section>
 
+      
+
       <section className="about-me">
         <div className="about-me-cont">
 
