@@ -1,11 +1,15 @@
-import AboutMe from "./components/static/about";
+//import AboutMe from "./components/static/about";
 import Link from "next/link";
-import ProjectList from "./components/common/projectList";
+//import ProjectList from "./components/common/projectList";
 import BlogList from "./components/common/blogList.jsx";
 import { getProjects } from "./utils/database/getTasks";
 import { Suspense } from "react";
 import Loading from "./loading";
 import HeroSection from "./components/common/heroSection";
+import ServicesSection from "./components/common/serviceSection.jsx";
+import Testimonial from "./components/common/testimonial.jsx";
+import Blog from "./components/common/blog.jsx";
+
 
 export default async function Home() {
   const projects = await getProjects();
@@ -37,7 +41,7 @@ export default async function Home() {
      
       </section>} */}
 
-      <HeroSection/>
+    
 
       {/* <section className="about-me">
         <div className="about-me-cont">
@@ -57,7 +61,7 @@ export default async function Home() {
           </div>
           
         </div>
-      </section>*/}
+      </section>
 
       <section className="Projects">
          
@@ -78,6 +82,7 @@ export default async function Home() {
       
       </section>
 
+      
       <section className="Blog">
 
         <div className="blog_heading">
@@ -100,6 +105,14 @@ export default async function Home() {
         </Suspense>
         
       </section>
+      
+      */}
+
+      <HeroSection/>
+      <ServicesSection/>
+      <Testimonial/>
+      <Blog/>
+
       
     </div>
    
