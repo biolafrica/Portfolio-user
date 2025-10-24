@@ -18,7 +18,10 @@ export default function Testimonial() {
     <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-5">
 
       {features.map((feature,n) => (
-        <div className={`mx-auto max-w-3xl p-5 lg:max-w-3xl lg:p-10 ${ n < 1 ? "border-b border-gray-200 lg:border-r lg:border-b-neutral-50": "" } `}>
+        <div key={feature.name} className={`
+          mx-auto max-w-3xl p-5 lg:max-w-3xl lg:p-10 
+          ${ n < 1 ? "border-b border-gray-200 lg:border-r lg:border-b-neutral-50": "" } 
+        `}>
         
           <div className="flex items-center space-x-3 ">
             <StarIcon className="text-indigo-600 h-6"/>

@@ -1,88 +1,61 @@
-import React from 'react';
+import React from 'react'
 
-const Footer = () => {
+const projects = ["FamilyFund", "Unseal", "Phobia", "See all →"]
+const companies = ["About", "Process", "Blog", "Contact us"]
+const socials = ["Facebook", "Instagram", "GitHub", "Dribbble"]
+
+export default function FooterSection() {
   return (
-    <footer className="w-full bg-white border-t border-gray-200">
+    <footer className="w-full bg-white ">
+
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
+
           {/* Work Column */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 mb-4">Work</h3>
+
             <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  FamilyFund
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Unseal
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Phobia
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  See all →
-                </a>
-              </li>
+              {projects.map((project) => (
+                <li key={project}>
+                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                    {project}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Company Column */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 mb-4">Company</h3>
+
             <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Process
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Contact us
-                </a>
-              </li>
+              {companies.map((company) => (
+                <li key={company}>
+                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                    {company}
+                  </a>
+                </li>
+              ))}
             </ul>
+
           </div>
 
           {/* Connect Column */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 mb-4">Connect</h3>
             <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Dribbble
-                </a>
-              </li>
+              
+              {socials.map((social) => (
+                <li key={social}>
+                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                    {social}
+                  </a>
+                </li>
+              ))}
+
             </ul>
           </div>
 
@@ -97,10 +70,13 @@ const Footer = () => {
               United States
             </address>
           </div>
+
         </div>
 
         {/* Bottom Section */}
+
         <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
+
           {/* Logo */}
           <div className="flex items-center gap-2">
             <svg 
@@ -129,4 +105,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+
