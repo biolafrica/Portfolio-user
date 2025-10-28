@@ -1,108 +1,61 @@
-import React from 'react'
+import FooterColumn from "./footerColumn";
 
-const projects = ["FamilyFund", "Unseal", "Phobia", "See all →"]
-const companies = ["About", "Process", "Blog", "Contact us"]
-const socials = ["Facebook", "Instagram", "GitHub", "Dribbble"]
+const projects = [
+  { name:"16bags", url: "https://16bags.com", id: 1 }, 
+  { name: "Eatup", url: "https://eatup.ng", id: 2 },
+  { name: "See all →", url: "/projects", id: 3 }
+];
+
+const companies = [
+  { name: "About", url: "/about", id: 1 },
+  { name : "Blog", url: "/blog", id: 2}, 
+  { name: "Contact us", url: "/contact", id: 3}
+];
+
+const socials = [
+  { name : "Email", url : "mailto:biolafrica@gmail.com", id: 1 }, 
+  { name: "LinkedIn", url : "https://www.linkedin.com/in/abiobaku/", id: 2 }, 
+  { name: "GitHub", url: "https://www.github.com/biolafrica", id: 3 }
+]
 
 export default function FooterSection() {
+  const year = new Date().getFullYear();
   return (
     <footer className="w-full bg-white ">
 
-      <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-6 py-5 md:py-10">
+        <div className="grid grid-cols-2 border-y border-gray-200 py-20 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 ">
+          
+          {/* Work, company and Connect Column */}
+          <FooterColumn title="Work" items={projects} />
+          <FooterColumn title="Company" items={companies} />
+          <FooterColumn title="Connect" items={socials} />
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
-
-          {/* Work Column */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Work</h3>
-
-            <ul className="space-y-3">
-              {projects.map((project) => (
-                <li key={project}>
-                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                    {project}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company Column */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Company</h3>
-
-            <ul className="space-y-3">
-              {companies.map((company) => (
-                <li key={company}>
-                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                    {company}
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-          </div>
-
-          {/* Connect Column */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Connect</h3>
-            <ul className="space-y-3">
-              
-              {socials.map((social) => (
-                <li key={social}>
-                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                    {social}
-                  </a>
-                </li>
-              ))}
-
-            </ul>
-          </div>
 
           {/* Office Address Column */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 mb-4">Office Address</h3>
             <address className="not-italic text-sm text-gray-600 leading-relaxed">
-              Studio Agency Inc.<br />
-              123 Design Street<br />
-              Creative District<br />
-              New York, NY 10001<br />
-              United States
+              13 Bottom O' Th' Moor, Oldham<br />
+              Greater Manchester<br />
+              OL1 3HR<br />
+              United Kingdom
             </address>
           </div>
 
         </div>
 
         {/* Bottom Section */}
-
-        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <svg 
-              className="w-5 h-5 text-gray-900" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M13 7l5 5m0 0l-5 5m5-5H6" 
-              />
-            </svg>
-            <span className="text-lg font-semibold text-gray-900">Studio.</span>
-          </div>
-
-          {/* Copyright */}
+        <div className="pt-8 ">
           <div className="text-sm text-gray-500">
-            © Studio Agency Inc. 2025
+            <h6>Copyright &copy; {year} Abiodun Biobaku</h6>
           </div>
         </div>
       </div>
     </footer>
   );
 };
+
+
 
 

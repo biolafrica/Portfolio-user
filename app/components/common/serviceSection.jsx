@@ -30,7 +30,9 @@ const features = [
 export default function ServicesSection() {
   return (
     <div className="bg-white py-24 sm:py-32">
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base/7 font-semibold text-indigo-600">Services</h2>
           <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
@@ -40,6 +42,7 @@ export default function ServicesSection() {
             I help businesses establish their online presence and grow through custom web solutions. Whether you're starting from scratch or improving what you have, I've got you covered.
           </p>
         </div>
+        
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
 

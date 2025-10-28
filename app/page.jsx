@@ -10,6 +10,7 @@ import ServicesSection from "./components/common/serviceSection.jsx";
 import Testimonial from "./components/common/testimonial.jsx";
 import Blog from "./components/common/blog.jsx";
 import FooterSection from "./components/common/footerSection.jsx";
+import ProjectsHomeSection from "./components/common/ProjectsHomeSection.jsx";
 
 
 export default async function Home() {
@@ -19,6 +20,7 @@ export default async function Home() {
   return (
     <div className="home-cont">
       <HeroSection/>
+      <ProjectsHomeSection/>
       <ServicesSection/>
       <Testimonial/>
       <Blog/>

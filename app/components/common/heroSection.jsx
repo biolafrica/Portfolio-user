@@ -37,10 +37,12 @@ export default function HeroSection() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-start">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Tell me about your project.{' '}
+
               <a href="#" className="font-semibold text-indigo-600">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Book a call <span aria-hidden="true">&rarr;</span>
               </a>
+
             </div>
           </div>
 
@@ -59,6 +61,7 @@ export default function HeroSection() {
               >
                 Book a call
               </a>
+              
               <a href="#" className="text-sm/6 font-semibold text-gray-900">
                 Email me <span aria-hidden="true">→</span>
               </a>
