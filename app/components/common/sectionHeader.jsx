@@ -21,7 +21,7 @@ export default function SectionHeader({
       <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
         {subheading}
       </p>
-      <p className="mt-6 text-lg/8 text-gray-700">{content}</p>
+      <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-4">{content}</p>
     </div>
   );
 }
