@@ -1,4 +1,4 @@
-import FooterColumn from "./footerColumn";
+import FooterColumn from "../common/footerColumn";
 
 const projects = [
   { name:"16bags", url: "https://16bags.com", id: 1 }, 

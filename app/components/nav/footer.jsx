@@ -1,5 +1,5 @@
-import FooterSection from "../common/footerSection";
-import FooterHeroSection from "../common/footerHeroSection";
+import FooterSection from "../sections/footerSection";
+import FooterHeroSection from "../sections/footerHeroSection";
 
 export default function Footer(){
   return(

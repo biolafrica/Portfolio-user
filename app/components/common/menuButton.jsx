@@ -14,9 +14,7 @@ export default function MenuButton(){
     setDisplay("none")
   }
 
-
   useEffect(()=>{
-
     const onResize = ()=>{
       const screenWidth = window.innerWidth;
       if(screenWidth > 992){
@@ -28,9 +26,6 @@ export default function MenuButton(){
     window.addEventListener("resize", onResize)
 
   }, [])
-
-
-  
 
   return(
     <>

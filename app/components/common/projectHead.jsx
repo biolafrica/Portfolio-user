@@ -10,9 +10,7 @@ export default function ProjectHead({projects}){
   const filteredProjects = projects.filter((project)=>(project.title).toLowerCase().includes(searchTerm.toLowerCase())) 
 
   return(
-    
     <>
-
       <div className="project-cont-heading">
         <h2><b>Projects</b></h2>
         <h5>A showcase of innovative solutions and real world applications</h5>
@@ -23,13 +21,12 @@ export default function ProjectHead({projects}){
           value={searchTerm} 
           onChange={(e)=>setSearchTerm(e.target.value)}
         />
-
       </div>
 
       <Suspense fallback={<Loading/>}>
         <ProjectList projects={filteredProjects}/>
       </Suspense>
-
+      
     </>
 
 

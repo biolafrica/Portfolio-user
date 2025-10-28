@@ -1,3 +1,5 @@
+import CallToActionButton from "../common/callToActionButton";
+
 export default function HeroSection() {
 
   return (
@@ -8,7 +10,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <svg
             aria-hidden="true"
-            className="absolute top-0 left-[max(50%,25rem)] h-256 w-512 -translate-x-1/2 mask-[radial-gradient(64rem_64rem_at_top,white,transparent)] stroke-gray-200"
+            className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
           >
             <defs>
               <pattern
@@ -32,17 +34,12 @@ export default function HeroSection() {
           </svg>
         </div>
 
-        <div className="max-w-3xl py-32 sm:py-48 lg:py-56">
+        <div className=" max-w-3xl py-32 sm:py-48 lg:py-56">
 
           <div className="hidden sm:mb-8 sm:flex sm:justify-start">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Tell me about your project.{' '}
-
-              <a href="#" className="font-semibold text-indigo-600">
-                <span aria-hidden="true" className="absolute inset-0" />
-                Book a call <span aria-hidden="true">&rarr;</span>
-              </a>
-
+              <CallToActionButton label="Book a call →" href="#" variant="text" />
             </div>
           </div>
 
@@ -55,16 +52,9 @@ export default function HeroSection() {
             </p>
 
             <div className="mt-10 flex items-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Book a call
-              </a>
-              
-              <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                Email me <span aria-hidden="true">→</span>
-              </a>
+              <CallToActionButton label="Book a call" href="#" />
+              <CallToActionButton label="Email me →" href="#" variant="text" color="gray" />
+
             </div>
           </div>
 
@@ -74,4 +64,3 @@ export default function HeroSection() {
     </div>
   )
 }
-

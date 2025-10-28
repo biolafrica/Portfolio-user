@@ -1,3 +1,5 @@
+import SectionHeader from "../common/sectionHeader";
+
 export default function ProjectsHomeSection(){
 
   const projects = [
@@ -20,17 +22,12 @@ export default function ProjectsHomeSection(){
   return (
     <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        
-        {/* Header Section */}
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-600">Projects</h2>
-          <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
-            Recent Projects
-          </p>
-          <p className="mt-6 text-lg/8 text-gray-700">
-            These projects represent successful partnerships with businesses across the UK and beyond. Each one solved a unique challenge.
-          </p>
-        </div>
+    
+        <SectionHeader
+          heading="Projects"
+          subheading="Recent Projects"
+          content="These projects represent successful partnerships with businesses across the UK and beyond. Each one solved a unique challenge."
+        />
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-16 sm:mt-20 lg:mt-24">
