@@ -20,6 +20,7 @@ const socials = [
 
 export default function FooterSection() {
   const year = new Date().getFullYear();
+  
   return (
     <footer className="w-full bg-white ">
 

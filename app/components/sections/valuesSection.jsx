@@ -1,4 +1,5 @@
 import {ChatBubbleLeftRightIcon, CodeBracketSquareIcon, RocketLaunchIcon, ShieldCheckIcon, UserGroupIcon  } from '@heroicons/react/24/solid'
+import SectionHeader from '../common/sectionHeader';
 
 export default function ValuesSection() {
 
@@ -39,18 +40,14 @@ export default function ValuesSection() {
     <section className="w-full bg-white px-6 py-16 sm:py-20 lg:py-52 lg:px-8">
 
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-            How I Work
-          </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl leading-relaxed">
-            My approach to building software that businesses can rely on.
-          </p>
-        </div>
+        <SectionHeader
+          subheading="How I Work"
+          content="My approach to building software that businesses can rely on."
+          align='left'
+        />
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-x-12 lg:gap-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-x-12 lg:gap-y-12 mt-12 sm:mt-16">
           {values.map((value) => (
             <div key={value.id} className="flex gap-4">
               {/* Icon */}

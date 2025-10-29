@@ -1,3 +1,5 @@
+import SectionHeader from "../common/sectionHeader";
+
 export default function FrequentlyAskedQuestion() {
   
   const faqs = [
@@ -30,24 +32,17 @@ export default function FrequentlyAskedQuestion() {
         <div className="mx-auto">
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-3">
-            {/* Left Column - Heading */}
-            <div className="lg:col-span-1">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Frequently asked questions
-              </h2>
-              <p className="mt-4 text-base text-gray-600">
+            <SectionHeader
+              subheading="Frequently asked questions"
+              content={<>
                 Can't find the answer you're looking for? Reach out to our{' '}
-                <a 
-                  href="#" 
-                  className="font-semibold text-indigo-600 hover:text-indigo-500"
-                >
+                <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
                   customer support
-                </a>{' '}
-                team.
-              </p>
-            </div>
+                </a>{' '} team.
+              </>}
+              align='left'
+            />
 
-            {/* Right Column - Questions */}
             <div className="lg:col-span-2">
               <dl className="space-y-10">
                 {faqs.map((faq, index) => (
@@ -62,6 +57,7 @@ export default function FrequentlyAskedQuestion() {
                 ))}
               </dl>
             </div>
+
           </div>
         </div>
       </div>

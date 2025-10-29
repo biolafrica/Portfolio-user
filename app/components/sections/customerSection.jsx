@@ -1,3 +1,5 @@
+import SectionHeader from "../common/sectionHeader";
+
 export default function CustomerSection() {
   const values = [
     {
@@ -25,18 +27,14 @@ export default function CustomerSection() {
         px-6 py-16 sm:py-20 lg:py-24 lg:px-8 max-w-7xl mx-auto md:rounded-3xl"
       >
         <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-              Trusted by Growing Businesses
-            </h2>
-            <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-              I've had the privilege of working with startups and companies across different industries, here's what they value most about working with me.
-            </p>
-          </div>
 
-          {/* Company Logos */}
-          <div className="">
+          <SectionHeader
+            subheading="Trusted by Growing Businesses"
+            content=" I've had the privilege of working with startups and companies across different industries, here's what they value most about working with me."
+            text="light"
+          />
+
+          <div className="mt-12 sm:mt-16 lg:mt-20">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-8">
                 {values.map((value) => (
