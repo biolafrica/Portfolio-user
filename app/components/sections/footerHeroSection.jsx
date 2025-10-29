@@ -8,9 +8,8 @@ export default function FooterHeroSection(){
       <div className="max-w-4xl mx-auto text-center">
 
         <SectionHeader
-          subheading="Start using our app today."
-          content=" Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id 
-          veniam aliqua proident excepteur commodo do ea."
+          subheading="Let's Build Something Together."
+          content="Have a project in mind? Let's talk about how I can help turn your idea into reality."
         />
 
         <div className="flex justify-center mt-5">

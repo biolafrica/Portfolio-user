@@ -13,7 +13,7 @@ const companies = [
 ];
 
 const socials = [
-  { name : "Email", url : "mailto:biolafrica@gmail.com", id: 1 }, 
+  { name : "Email me", url : "mailto:biolafrica@gmail.com", id: 1 }, 
   { name: "LinkedIn", url : "https://www.linkedin.com/in/abiobaku/", id: 2 }, 
   { name: "GitHub", url: "https://www.github.com/biolafrica", id: 3 }
 ]

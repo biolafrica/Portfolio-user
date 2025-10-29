@@ -1,6 +1,6 @@
 import SectionHeader from "../common/sectionHeader";
 
-export default function ProjectsHomeSection(){
+export default function ProjectsHomeSection({align}){
 
   const projects = [
     {
@@ -24,9 +24,10 @@ export default function ProjectsHomeSection(){
       <div className="max-w-6xl mx-auto">
     
         <SectionHeader
-          heading="Projects"
+          heading={`${align === "center" ? "Project" : ""}`}
           subheading="Recent Projects"
           content="These projects represent successful partnerships with businesses across the UK and beyond. Each one solved a unique challenge."
+          align={align}
         />
 
         {/* Projects Grid */}
@@ -76,6 +77,7 @@ export default function ProjectsHomeSection(){
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

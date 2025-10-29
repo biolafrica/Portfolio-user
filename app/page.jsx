@@ -20,7 +20,7 @@ export default async function Home() {
   return (
     <div className="home-cont">
       <HeroSection/>
-      <ProjectsHomeSection/>
+      <ProjectsHomeSection align = "center"/>
       <ServicesSection/>
       <Testimonial/>
       <Blog/>
