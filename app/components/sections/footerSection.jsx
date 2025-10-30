@@ -9,7 +9,7 @@ const projects = [
 const companies = [
   { name: "About", url: "/about", id: 1 },
   { name : "Blog", url: "/blog", id: 2}, 
-  { name: "Contact us", url: "/contact", id: 3}
+  { name: "Contact us", url: "mailto:biolafrica@gmail.com", id: 3}
 ];
 
 const socials = [

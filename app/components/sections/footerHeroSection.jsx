@@ -13,7 +13,7 @@ export default function FooterHeroSection(){
         />
 
         <div className="flex justify-center mt-5">
-          <CallToActionButton label="Book a call" href="#" />
+          <CallToActionButton label="Book a call" href="https://cal.com/abiodun-biobaku/30min" target="_blank" />
         </div>
 
       </div>

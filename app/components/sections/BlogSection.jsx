@@ -1,43 +1,7 @@
-import React from 'react';
+import formatDate from '@/app/utils/common/fomatDate';
 import SectionHeader from '../common/sectionHeader';
 
-const BlogSection = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'Boost your conversion rate',
-      date: 'Mar 16, 2020',
-      author: {
-        name: 'Michael Foster',
-        avatar: '👤'
-      },
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80',
-      imageAlt: 'Workspace setup with laptop and desk organizer'
-    },
-    {
-      id: 2,
-      title: 'How to use search engine optimization to drive sales',
-      date: 'Mar 10, 2020',
-      author: {
-        name: 'Lindsay Walton',
-        avatar: '👤'
-      },
-      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80',
-      imageAlt: 'Laptop by window with plants'
-    },
-    {
-      id: 3,
-      title: 'Improve your customer experience',
-      date: 'Feb 12, 2020',
-      author: {
-        name: 'Tom Cook',
-        avatar: '👤'
-      },
-      image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80',
-      imageAlt: 'iMac desktop setup'
-    }
-  ];
-
+const BlogSection = ({blogPosts}) => {
   return (
     <section className="w-full px-4 py-16 sm:px-6 lg:px-8">
 
@@ -60,7 +24,7 @@ const BlogSection = () => {
               <div className="relative h-[400px] md:h-64 lg:h-[450px] overflow-hidden">
                 <img 
                   src={post.image}
-                  alt={post.imageAlt}
+                  alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 {/* Gradient Overlay */}
@@ -71,13 +35,13 @@ const BlogSection = () => {
                   {/* Date and Author */}
                   <div className="flex items-center gap-3 mb-3">
                     <time className="text-sm font-normal">
-                      {post.date}
+                      {formatDate(post.created_at)}
                     </time>
                     <span className="text-gray-300">•</span>
                     <div className="flex items-center gap-2">
-                      <span className="text-lg">{post.author.avatar}</span>
+                      <span className="text-lg"> 👤 </span>
                       <span className="text-sm font-normal">
-                        {post.author.name}
+                        Abiodun Biobaku
                       </span>
                     </div>
                   </div>

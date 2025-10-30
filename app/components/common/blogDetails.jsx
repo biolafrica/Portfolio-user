@@ -1,63 +1,11 @@
 "use client"
-import { ArrowLeftCircleIcon, CalendarDateRangeIcon, ClockIcon, ShareIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftCircleIcon, CalendarDateRangeIcon, ClockIcon} from "@heroicons/react/24/outline";
+import SharePost from "./share";
+import formatDate from "@/app/utils/common/fomatDate";
 
-/**
- * BlogDetailPage - Accepts simple blog form data and renders it beautifully
- * 
- * FIXED VERSION - Handles all edge cases and undefined errors
- * 
- * This component accepts the kind of data you'd get from a simple blog form:
- * - Title (text input)
- * - Author name (text input)
- * - Read time (text input)
- * - Date (date input)
- * - Content (textarea with markdown-like formatting)
- * - Images (1-3 image URLs)
- */
-
-const BlogDetailPage = ({ blogPost }) => {
-  // Example of simple form data structure
-  const defaultBlogPost = {
-    title: "Crafting a design system for a multiplanetary future",
-    author: "John Doe",
-    date: "2022-09-05",
-    readTime: "8 min read",
-    content: `Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.
-
-    ## Sermone fata
-
-    Lorem markdownum, suis hi scenula in medibusm. Terque unxis augere nec, linguae posteriore in ultriciae respondere candidus Mimasque formas; quae conventuri cervice.
-
-    \`\`\`javascript
-    exbibyte_wins = gigahertz(3);
-    gravitsAlallityCiient = control_uat;
-    if (stateWidth(figure >= 2) {
-        jfs = 647065 + ldapVirtl(tutorialRestore, 85);
-    }
-    \`\`\`
-
-    Aere repetit cognataque natuis. Habenset wela sodalis saepe munus nondum adque oscula nomena pignora corpore desertat.
-
-    ## Lethaei Pindumve me quae dinumerat Pavor
-
-    Idem se saxa fata pollentibus gimmis; quos petibus.
-
-    1. Captus inperveruit collo
-    2. Nec nam placebant
-    3. Siquis vultgus
-    4. Dictis caristeme fugiae
-
-    Ungues flatula amosso, ille addit litusque mortuique laborsur versus nullaverent contine devastique.`,
-    images: [
-      "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=1200&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=600&fit=crop"
-    ]
-  };
-
-  const blog = blogPost || defaultBlogPost;
-
-  // Parse markdown-like content and split into sections - WITH ROBUST ERROR HANDLING
+export default function BlogDetailPage({ blog }){
+ 
+  // Parse markdown-like content and split into sections
   const parseContent = (content) => {
     if (!content) return [];
 
@@ -216,7 +164,7 @@ const BlogDetailPage = ({ blogPost }) => {
     return sections;
   };
 
-  // Insert images intelligently between content sections
+  // Insert images between content sections
   const insertImagesIntoSections = (sections, images) => {
     if (!images || images.length === 0) return sections;
 
@@ -258,23 +206,14 @@ const BlogDetailPage = ({ blogPost }) => {
     return result;
   };
 
-  // Parse content and insert images
-  const sections = parseContent(blog.content);
-  const contentWithImages = insertImagesIntoSections(sections, blog.images);
+  const content = blog.content 
+  const images = blog.images 
 
-  // Format date
-  const formatDate = (dateString) => {
-    try {
-      const date = new Date(dateString);
-      return date.toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-      });
-    } catch (error) {
-      return dateString; // Return original if parsing fails
-    }
-  };
+  // Parse content and insert images
+  const sections = parseContent(content);
+  const contentWithImages = insertImagesIntoSections(sections, images);
+
+ 
 
   // Render different section types
   const renderSection = (section, index) => {
@@ -297,7 +236,7 @@ const BlogDetailPage = ({ blogPost }) => {
 
       case 'image':
         return (
-          <div key={index} className="mb-8 md:mb-12 rounded-2xl overflow-hidden bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 p-4 md:p-6">
+          <div key={index} className="mb-8 md:mb-12 rounded-2xl overflow-hidden">
             <div className="bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
               <img 
                 src={section.src} 
@@ -381,14 +320,14 @@ const BlogDetailPage = ({ blogPost }) => {
           <div className="flex items-center flex-wrap gap-x-4 gap-y-2 text-sm text-gray-500 mb-4">
             <div className="flex items-center">
               <CalendarDateRangeIcon className="w-4 h-4 mr-1.5" />
-              <time dateTime={blog.date}>{formatDate(blog.date)}</time>
+              <time dateTime={blog.created_at}>{formatDate(blog.created_at)}</time>
             </div>
-            {blog.readTime && (
+            {blog.read && (
               <>
                 <span>•</span>
                 <div className="flex items-center">
                   <ClockIcon className="w-4 h-4 mr-1.5" />
-                  <span>{blog.readTime}</span>
+                  <span>{blog.read} minute read</span>
                 </div>
               </>
             )}
@@ -406,15 +345,13 @@ const BlogDetailPage = ({ blogPost }) => {
                 {blog.author ? blog.author.charAt(0).toUpperCase() : 'A'}
               </div>
               <div>
-                <p className="font-medium text-gray-900">{blog.author || 'Anonymous'}</p>
+                <p className="font-medium text-gray-900">{blog.author || 'Abiodun Biobaku'}</p>
                 <p className="text-sm text-gray-500">Author</p>
               </div>
             </div>
+          
+            <SharePost blog={blog} />
             
-            <button className="flex items-center px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors">
-              <ShareIcon className="w-4 h-4 mr-2" />
-              <span>Share</span>
-            </button>
           </div>
         </header>
 
@@ -429,15 +366,12 @@ const BlogDetailPage = ({ blogPost }) => {
             <p className="text-gray-600">
               Thanks for reading! Share this article if you found it helpful.
             </p>
-            <button className="flex items-center px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
-              <ShareIcon className="w-4 h-4 mr-2" />
-              Share Article
-            </button>
+
+            <SharePost blog={blog} />
+
           </div>
         </footer>
       </article>
     </div>
   );
 };
-
-export default BlogDetailPage;

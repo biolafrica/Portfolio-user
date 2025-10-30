@@ -39,7 +39,7 @@ export default function HeroSection() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-start">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Tell me about your project.{' '}
-              <CallToActionButton label="Book a call →" href="#" variant="text" />
+              <CallToActionButton label="Book a call →" href="https://cal.com/abiodun-biobaku/30min" target="_blank" variant="text" />
             </div>
           </div>
 
@@ -52,8 +52,8 @@ export default function HeroSection() {
             </p>
 
             <div className="mt-10 flex items-center gap-x-6">
-              <CallToActionButton label="Book a call" href="#" />
-              <CallToActionButton label="Email me →" href="#" variant="text" color="gray" />
+              <CallToActionButton label="Book a call" href="https://cal.com/abiodun-biobaku/30min" target="_blank" />
+              <CallToActionButton label="Email me →" href="mailto:biolafrica@gmail.com" variant="text" color="gray" />
 
             </div>
           </div>
