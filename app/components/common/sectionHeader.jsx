@@ -1,3 +1,5 @@
+import Background from "./background";
+
 export default function SectionHeader({ heading, subheading, content, align = "center", text="normal"}) {
 
   const alignmentClasses = {

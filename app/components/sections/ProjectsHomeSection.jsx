@@ -1,3 +1,4 @@
+
 import SectionHeader from "../common/sectionHeader";
 
 export default function ProjectsHomeSection({align}){
@@ -21,14 +22,17 @@ export default function ProjectsHomeSection({align}){
 
   return (
     <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
+
       <div className="max-w-6xl mx-auto">
-    
-        <SectionHeader
-          heading={`${align === "center" ? "Project" : ""}`}
-          subheading="Recent Projects"
-          content="These projects represent successful partnerships with businesses across the UK and beyond. Each one solved a unique challenge."
-          align={align}
-        />
+
+        <div>
+          <SectionHeader
+            heading={`${align === "center" ? "Project" : ""}`}
+            subheading="Recent Projects"
+            content="These projects represent successful partnerships with businesses across the UK and beyond. Each one solved a unique challenge."
+            align={align}
+          />
+        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-16 sm:mt-20 lg:mt-24">

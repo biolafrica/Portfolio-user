@@ -2,6 +2,7 @@
 import { ArrowLeftCircleIcon, CalendarDateRangeIcon, ClockIcon} from "@heroicons/react/24/outline";
 import SharePost from "./share";
 import formatDate from "@/app/utils/common/fomatDate";
+import Background from "./background";
 
 export default function BlogDetailPage({ blog }){
  
@@ -299,8 +300,12 @@ export default function BlogDetailPage({ blog }){
 
   return (
     <div className="min-h-screen bg-gray-50">
+
       {/* Navigation */}
       <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-white/90">
+
+        <Background/>
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <button 
             onClick={() => window.history.back()}
@@ -312,8 +317,13 @@ export default function BlogDetailPage({ blog }){
         </div>
       </nav>
 
+      
+
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+      
+
         {/* Article Header */}
         <header className="mb-8 md:mb-12">
           {/* Date and Read Time */}
@@ -371,7 +381,9 @@ export default function BlogDetailPage({ blog }){
 
           </div>
         </footer>
+
       </article>
+
     </div>
   );
 };

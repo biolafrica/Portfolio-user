@@ -1,5 +1,6 @@
 import { getBlog } from "@/app/utils/database/getTask";
 import BlogDetailPage from "@/app/components/common/blogDetails";
+import Background from "@/app/components/common/background";
 
 export async function generateMetadata({params}){
   const {id} = await params;
@@ -14,6 +15,7 @@ export async function generateMetadata({params}){
 export default async function SelectedBlog({params}){
   const {id} = await params;
   const blog = await getBlog(id)
+  
   return(
     <>
       <BlogDetailPage blog={blog}/>

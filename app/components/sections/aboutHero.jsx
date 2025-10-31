@@ -1,3 +1,4 @@
+import Background from "../common/background";
 import SectionHeader from "../common/sectionHeader";
 
 export default function AboutHero() {
@@ -5,6 +6,8 @@ export default function AboutHero() {
     <section className="py-16 sm:py-20 lg:py-52">
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <Background/>
 
         <div className="mx-auto max-w-2xl lg:max-w-none">
 

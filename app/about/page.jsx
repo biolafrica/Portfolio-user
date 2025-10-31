@@ -6,11 +6,11 @@ import ValuesSection from "../components/sections/valuesSection";
 export default function AboutUs() {
   
   return (
-    <>
+    <div>
       <AboutHero/>
       <CustomerSection/>
       <ValuesSection/>
       <FrequentlyAskedQuestion />
-    </>
+    </div>
   );
 }
