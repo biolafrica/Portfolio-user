@@ -1,13 +1,12 @@
 import { getBlog } from "@/app/utils/database/getTask";
 import BlogDetailPage from "@/app/components/common/blogDetails";
-import Background from "@/app/components/common/background";
 
 export async function generateMetadata({params}){
   const {id} = await params;
   const blog = await getBlog(id)
 
   return{
-    title: `Abiodun Chronicles | ${blog.title}`
+    title: `Blog Details | ${blog.title}`
   }
 
 }

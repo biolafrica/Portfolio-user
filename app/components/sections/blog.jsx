@@ -1,6 +1,8 @@
 import { getBlogs } from "@/app/utils/database/getTasks";
 import SectionHeader from "../common/sectionHeader"
 import formatDate from "@/app/utils/common/fomatDate";
+import Link from "next/link";
+import CallToActionButton from "../common/callToActionButton";
 
 
 export default async function Blog() {
@@ -23,35 +25,30 @@ export default async function Blog() {
                 <time dateTime={post.datetime} className="text-gray-500">
                   {formatDate(post.created_at)}
                 </time>
-                <a
+                <Link
                   href={`/blog/${post.id}`}
                   className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                 >
                   {post.type}
-                </a>
+                </Link>
                 
               </div>
+
+              
               <div className="group relative grow">
                 <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href={`/blog/${post.id}`}>
+                  <Link href={`/blog/${post.id}`}>
                     <span className="absolute inset-0" />
                     {post.title}
-                  </a>
+                  </Link>
                 </h3>
                 <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.excerpt}</p>
               </div>
-              <div className="relative mt-8 flex items-center gap-x-4 justify-self-end">
-                <img alt="" src="/images/me.jpeg" className="size-10 rounded-full bg-gray-50" />
-                <div className="text-sm/6">
-                  <p className="font-semibold text-gray-900">
-                    <a href={`/blog/${post.id}`}>
-                      <span className="absolute inset-0" />
-                      Abiodun Biobaku
-                    </a>
-                  </p>
-                  <p className="text-gray-600">Software Engineer</p>
-                </div>
+
+              <div className="relative mt-8 justify-self-end">
+                <CallToActionButton className="pl-0" label="Continue reading →" href={`/blog/${post.id}`} variant="text" />
               </div>
+
             </article>
           ))}
         </div>

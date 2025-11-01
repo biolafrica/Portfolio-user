@@ -45,8 +45,7 @@ export default function SharePost({ blog }) {
       console.error('Failed to copy:', err);
     }
   };
-
-  // Share on Twitter/X
+  // Social Media Share Handlers
   const shareOnTwitter = () => {
     const text = `${title}${excerpt ? '\n\n' + excerpt.substring(0, 100) + '...' : ''}`;
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(postUrl)}`;
@@ -54,20 +53,19 @@ export default function SharePost({ blog }) {
     setShowMenu(false);
   };
 
-  // Share on LinkedIn
   const shareOnLinkedIn = () => {
     const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
     window.open(linkedInUrl, "_blank", "noopener,noreferrer,width=550,height=420");
     setShowMenu(false);
   };
 
-  // Share on Facebook
   const shareOnFacebook = () => {
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`;
     window.open(facebookUrl, "_blank", "noopener,noreferrer,width=550,height=420");
     setShowMenu(false);
   };
 
+  
   // Native Web Share API (mobile-friendly)
   const handleNativeShare = async () => {
     if (navigator.share) {

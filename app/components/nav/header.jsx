@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image"
 import { ArrowLongRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Background from "../common/background";
+import Link from "next/link";
 
 
 
@@ -25,38 +26,37 @@ export default function Header (){
        
         <div className="flex items-center justify-between h-12 lg:h-20s w-full px-2 ">
 
-          {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
-              <Image src="/images/Frame 1145.png" alt="abiodun logo" width={36} height={36}/>
-            </a>
+            <Link href="/" className="flex items-center">
+              <Image src="/images/abiodun-biobaku-web-developers.png" alt="abiodun logo" width={36} height={36}/>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
-                className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                className="text-base font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-200"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
-          {/* Log in Button - Desktop */}
+          {/* call in Button - Desktop */}
           <div className="hidden lg:flex lg:items-center">
-            <a
-              href="#login"
-              className="inline-flex items-center gap-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+            <Link
+              href="https://cal.com/abiodun-biobaku/30min"
+              className="inline-flex items-center gap-2 text-base font-medium text-gray-700 hover:text-indigo-600  transition-colors duration-200"
             >
               <span className="flex items-center gap-1">
                 Book a call <ArrowLongRightIcon className="w-5 h-5"/> 
               </span>
               
               
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -88,25 +88,25 @@ export default function Header (){
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             
-            {/* Mobile Log in */}
-            <a
+            {/* Mobile Book a call */}
+            <Link
               href="#login"
               className="flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <span>Book a call</span>
               <ArrowLongRightIcon className="w-5 h-5"/> 
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -46,16 +46,13 @@ export default function ValuesSection() {
           align='left'
         />
 
-        {/* Values Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-x-12 lg:gap-y-12 mt-12 sm:mt-16">
           {values.map((value) => (
             <div key={value.id} className="flex gap-4">
-              {/* Icon */}
               <div>
                <value.icon aria-hidden="true" className="size-6 text-indigo-600" />
               </div>
               
-              {/* Content */}
               <div className="flex-1">
                 <h3 className="text-base sm:text-xl font-semibold text-gray-900 mb-2">
                   {value.title}

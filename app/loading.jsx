@@ -10,7 +10,6 @@ export default function Loading(){
         loop
         autoplay
       />
-
     </div>
  
 

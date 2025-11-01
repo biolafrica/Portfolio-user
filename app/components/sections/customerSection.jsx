@@ -38,11 +38,7 @@ export default function CustomerSection() {
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-8">
                 {values.map((value) => (
-                  <div 
-                    key={value.id} 
-                    className='flex gap-4 '>
-                  
-                    {/* Content */}
+                  <div key={value.id} className='flex gap-4' >
                     <div className="flex-1">
                       <h3 className="text-base sm:text-lg font-semibold text-white mb-2 border-l-2 border-white pl-6 ">
                         {value.title}

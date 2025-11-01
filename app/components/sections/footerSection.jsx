@@ -3,7 +3,7 @@ import FooterColumn from "../common/footerColumn";
 const projects = [
   { name:"16bags", url: "https://16bags.com", id: 1 }, 
   { name: "Eatup", url: "https://eatup.ng", id: 2 },
-  { name: "See all →", url: "/projects", id: 3 }
+  { name: "See all →", url: "/project", id: 3 }
 ];
 
 const companies = [
@@ -27,13 +27,10 @@ export default function FooterSection() {
       <div className="max-w-7xl mx-auto px-6 py-5 md:py-10">
         <div className="grid grid-cols-2 border-y border-gray-200 py-20 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 ">
           
-          {/* Work, company and Connect Column */}
           <FooterColumn title="Work" items={projects} />
           <FooterColumn title="Company" items={companies} />
           <FooterColumn title="Connect" items={socials} />
 
-
-          {/* Office Address Column */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 mb-4">Office Address</h3>
             <address className="not-italic text-sm text-gray-600 leading-relaxed">
@@ -43,10 +40,8 @@ export default function FooterSection() {
               United Kingdom
             </address>
           </div>
-
         </div>
 
-        {/* Bottom Section */}
         <div className="pt-8 ">
           <div className="text-sm text-gray-500">
             <h6>Copyright &copy; {year} Abiodun Biobaku</h6>

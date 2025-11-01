@@ -1,6 +1,5 @@
 import Background from "../common/background";
 import CallToActionButton from "../common/callToActionButton";
-import Header from "../nav/header";
 
 export default function HeroSection() {
 
@@ -16,7 +15,7 @@ export default function HeroSection() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-start">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Tell me about your project.{' '}
-              <CallToActionButton label="Book a call →" href="https://cal.com/abiodun-biobaku/30min" target="_blank" variant="text" />
+              <CallToActionButton label="Book a call →" href="https://cal.com/abiodun-biobaku/30min" variant="text" />
             </div>
           </div>
 

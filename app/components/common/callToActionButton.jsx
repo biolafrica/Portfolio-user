@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CallToActionButton({
   label = "Click Me",
   href = "#",
@@ -14,10 +16,9 @@ export default function CallToActionButton({
     primary: `bg-indigo-600 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-indigo-600`,
     secondary: `bg-gray-900 text-white shadow-sm hover:bg-gray-700 focus-visible:outline-gray-900`,
     outline: `border border-gray-300 text-gray-700 hover:bg-gray-50 focus-visible:outline-indigo-600`,
-    text: `bg-transparent px-0 py-0 focus-visible:outline-none`, // color handled separately
+    text: `bg-transparent px-0 py-0 focus-visible:outline-none`,
   };
 
-  // Custom color styles for text buttons
   const textColors = {
     indigo: "text-indigo-600 hover:text-indigo-500",
     black: "text-gray-900 hover:text-gray-700",
@@ -48,9 +49,9 @@ export default function CallToActionButton({
   }
 
   return (
-    <a href={href} className={combined}>
+    <Link href={href} className={combined}>
       {content}
-    </a>
+    </Link>
   );
 }
 

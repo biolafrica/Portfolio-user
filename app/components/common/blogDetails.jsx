@@ -3,6 +3,7 @@ import { ArrowLeftCircleIcon, CalendarDateRangeIcon, ClockIcon} from "@heroicons
 import SharePost from "./share";
 import formatDate from "@/app/utils/common/fomatDate";
 import Background from "./background";
+import Image from "next/image";
 
 export default function BlogDetailPage({ blog }){
  
@@ -237,13 +238,17 @@ export default function BlogDetailPage({ blog }){
 
       case 'image':
         return (
-          <div key={index} className="mb-8 md:mb-12 rounded-2xl overflow-hidden">
-            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
-              <img 
+          <div key={index} className="mb-8 md:mb-12 rounded-2xl overflow-hidden ">
+            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-2xl relative w-full aspect-video">
+              <Image 
                 src={section.src} 
                 alt={section.alt || 'Blog image'}
-                className="w-full h-auto object-cover"
-                loading="lazy"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                quality={90}
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjQ3NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
               />
             </div>
           </div>
@@ -303,9 +308,8 @@ export default function BlogDetailPage({ blog }){
 
       {/* Navigation */}
       <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-white/90">
-
+ 
         <Background/>
-
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <button 
             onClick={() => window.history.back()}
@@ -317,14 +321,9 @@ export default function BlogDetailPage({ blog }){
         </div>
       </nav>
 
-      
-
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
 
-      
-
-        {/* Article Header */}
         <header className="mb-8 md:mb-12">
           {/* Date and Read Time */}
           <div className="flex items-center flex-wrap gap-x-4 gap-y-2 text-sm text-gray-500 mb-4">
@@ -365,12 +364,10 @@ export default function BlogDetailPage({ blog }){
           </div>
         </header>
 
-        {/* Article Body */}
         <div className="prose prose-lg max-w-none">
           {contentWithImages.map((section, index) => renderSection(section, index))}
         </div>
 
-        {/* Article Footer */}
         <footer className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <p className="text-gray-600">
