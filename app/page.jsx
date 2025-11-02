@@ -3,6 +3,8 @@ import ServicesSection from "./components/sections/serviceSection.jsx";
 import Testimonial from "./components/sections/testimonial.jsx";
 import Blog from "./components/sections/blog.jsx";
 import ProjectsHomeSection from "./components/sections/ProjectsHomeSection.jsx";
+import { Suspense } from "react";
+import BlogGridLoading from "./loading.jsx";
 
 export const metadata = {
   title: 'Home',
@@ -12,12 +14,18 @@ export const metadata = {
 
 export default async function Home() {
   return (
-    <div className="home-cont">
-      <HeroSection/>
+    <div>
+      <HeroSection 
+        heading="Full-Stack Developer Building Scalable Web App."
+        subheading="I'm Abiodun Biobaku, a software engineer based in the UK, helping startups and businesses build fast, reliable web applications."
+      />
+      
       <ProjectsHomeSection align = "center"/>
       <ServicesSection/>
       <Testimonial/>
-      <Blog/>
+      <Suspense fallback={<BlogGridLoading/>}>
+        <Blog/>
+      </Suspense>
     </div>
    
   );

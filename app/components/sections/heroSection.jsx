@@ -1,7 +1,7 @@
 import Background from "../common/background";
 import CallToActionButton from "../common/callToActionButton";
 
-export default function HeroSection() {
+export default function HeroSection({heading, subheading}) {
 
   return (
     <div className="bg-white">
@@ -21,10 +21,10 @@ export default function HeroSection() {
 
           <div className="">
             <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-              Full-Stack Developer Building Scalable Web App.
+              {heading}
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-              I'm Abiodun Biobaku, a software engineer based in the UK, helping startups and businesses build fast, reliable web applications. 
+             {subheading}
             </p>
 
             <div className="mt-10 flex items-center gap-x-6">
