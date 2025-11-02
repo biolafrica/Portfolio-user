@@ -1,5 +1,5 @@
 // Enhanced Shimmer Effect
-export default function Loading() {
+function BlogCardSkeleton() {
   return (
     <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm border animate-pulse">
       <div className="relative h-[400px] md:h-64 lg:h-[450px] overflow-hidden bg-gray-200">
@@ -19,6 +19,17 @@ export default function Loading() {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+// Loading State
+export default function BlogGridLoading() {
+  return (
+    <div className="grid grid-cols-1 mt-12 sm:mt-16 lg:mt-56 sm:px-6 md:px-20 lg:px-8 lg:grid-cols-3 gap-6 lg:gap-8">
+      {[...Array(3)].map((_, i) => (
+        <BlogCardSkeleton key={i} />
+      ))}
     </div>
   );
 }

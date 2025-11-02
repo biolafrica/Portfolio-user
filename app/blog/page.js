@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Background from "../components/common/background";
 import SectionHeader from "../components/common/sectionHeader";
 import BlogSection from "../components/sections/BlogSection"
-import BlogGridLoading from "../loading";
+import BlogGridLoading from "./loading";
 
 export const metadata = {
   title: 'Blog',

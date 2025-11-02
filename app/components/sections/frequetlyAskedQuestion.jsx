@@ -36,7 +36,7 @@ export default function FrequentlyAskedQuestion() {
               subheading="Frequently asked questions"
               content={<>
                 Can't find the answer you're looking for? Reach out to our{' '}
-                <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                <a href="mailto:biolafrica@gmail.com" className="font-semibold text-indigo-600 hover:text-indigo-500">
                   customer support
                 </a>{' '} team.
               </>}
