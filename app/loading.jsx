@@ -1,8 +1,9 @@
 // Enhanced Shimmer Effect
 export default function Loading() {
   return (
-    <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm border animate-pulse">
-      <div className="relative h-[400px] md:h-64 lg:h-[450px] overflow-hidden bg-gray-200">
+    <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm border animate-pulse w-auto">
+
+      <div className="relative h-[400px] md:h-64 lg:h-[450px] overflow-hidden bg-gray-200 px-6 md:px-40 ">
         {/* Shimmer overlay */}
         <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
         

@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Background from "../components/common/background";
 import SectionHeader from "../components/common/sectionHeader";
 import BlogSection from "../components/sections/BlogSection"
-import BlogGridLoading from "./loading";
+import BlogGridLoading from "../components/static/blogLoading";
 
 export const metadata = {
   title: 'Blog',
@@ -18,8 +18,9 @@ export default function Blog() {
           subheading="From the blog"
           content="Learn how to grow your business with our expert advice."
         />
-        <Suspense fallback={<BlogGridLoading/>}>
-        <BlogSection />
+
+        <Suspense fallback={<BlogGridLoading />}>
+          <BlogSection />
         </Suspense>
       </div>
     </section>

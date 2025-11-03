@@ -1,7 +1,6 @@
 import formatDate from '@/app/utils/common/fomatDate';
 import Link from 'next/link';
 import Image from 'next/image';
-import BlogGridLoading from '@/app/loading';
 import { EmptyBlog } from '../static/empty';
 import { getBlogs } from '@/app/utils/database/getTasks';
 
