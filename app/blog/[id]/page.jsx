@@ -1,7 +1,7 @@
 import { getBlog } from "@/app/utils/database/getTask";
 import BlogDetailPage from "@/app/components/common/blogDetails";
 import { Suspense } from "react";
-import Loading from "@/app/loading";
+import Loading from "./loading";
 
 export async function generateMetadata({params}){
   const {id} = await params;
@@ -19,8 +19,9 @@ export default async function SelectedBlog({params}){
   
   return(
     <div >
-      
-      <BlogDetailPage blog={blog}/>
+      <Suspense fallback={<Loading />}>
+        <BlogDetailPage blog={blog}/>
+      </Suspense>
       
     </div>
   )

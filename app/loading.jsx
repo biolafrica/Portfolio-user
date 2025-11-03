@@ -1,23 +1,16 @@
-// Enhanced Shimmer Effect
+// app/loading.jsx
 export default function Loading() {
   return (
-    <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm border animate-pulse w-auto">
-
-      <div className="relative h-[400px] md:h-64 lg:h-[450px] overflow-hidden bg-gray-200 px-6 md:px-40 ">
-        {/* Shimmer overlay */}
-        <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
-        
-        {/* Content placeholders */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-gray-800/80 to-transparent">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="h-3 w-20 bg-gray-400/50 rounded"></div>
-            <div className="h-3 w-3 bg-gray-400/50 rounded-full"></div>
-            <div className="h-3 w-28 bg-gray-400/50 rounded"></div>
+    <div className="fixed inset-0 bg-white flex items-center justify-center">
+      <div className="flex flex-col items-center gap-6">
+        <div className="relative">
+          <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center">
+            <img src="/favicon.ico" alt="Logo" className="w-10 h-10" />
           </div>
-          <div className="space-y-2">
-            <div className="h-5 bg-gray-400/50 rounded w-11/12"></div>
-            <div className="h-5 bg-gray-400/50 rounded w-8/12"></div>
-          </div>
+          <div className="absolute inset-0 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin"></div>
+        </div>
+        <div className="w-56 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+          <div className="h-full bg-purple-600 animate-loading-bar"></div>
         </div>
       </div>
     </div>
